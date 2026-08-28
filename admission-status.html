@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Status — The Brain College Bhakkar</title>
+  <meta name="description" content="Check your admission application status at The Brain College Bhakkar by entering your Application ID.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo"><img src="images/logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"></div>
+    <div class="preloader-text">Loading...</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+</div>
+
+<a href="https://wa.me/923338044574" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<div class="mobile-overlay"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo"><div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div class="nav-logo-text"><div class="nav-logo-title">Brain College</div><div class="nav-logo-sub">Bhakkar</div></div></div>
+    <div class="mobile-nav-close"><i class="fas fa-times"></i></div>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About</a>
+    <a href="courses.html" class="mobile-nav-link"><i class="fas fa-book"></i> Courses</a>
+    <a href="admission-status.html" class="mobile-nav-link"><i class="fas fa-search"></i> Status</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  <a href="admission.html" class="mobile-nav-apply">Apply Now 2026</a>
+</nav>
+
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+        <div class="nav-logo-text"><div class="nav-logo-title">The Brain College</div><div class="nav-logo-sub">Bhakkar — Est. 2011</div></div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="faculty.html" class="nav-link">Faculty</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="admission-status.html" class="nav-link active">Status</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="admission.html" class="nav-apply-btn">Apply Now 2026</a>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner page-banner-status">
+  <div class="container">
+    <div class="page-banner-inner">
+      <div class="breadcrumb" style="margin-bottom:12px;">
+        <a href="index.html" class="breadcrumb-item">Home</a>
+        <span class="breadcrumb-sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="breadcrumb-item active">Admission Status</span>
+      </div>
+      <h1 class="page-banner-title">Check Admission Status</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1rem;margin-top:8px;">Enter your Application ID to check your status</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="status-checker">
+
+      <!-- Demo IDs helper -->
+      <div style="background:rgba(26,60,110,0.04);border:1px dashed rgba(26,60,110,0.20);border-radius:var(--radius-md);padding:16px 20px;margin-bottom:24px;font-size:0.84rem;color:var(--gray-600);" class="reveal">
+        <strong style="color:var(--primary);"><i class="fas fa-lightbulb"></i> Demo Application IDs to test:</strong><br>
+        <span style="font-family:monospace;">BRAIN-2026-10125</span> (Approved) &nbsp;|&nbsp;
+        <span style="font-family:monospace;">BRAIN-2026-20200</span> (Pending) &nbsp;|&nbsp;
+        <span style="font-family:monospace;">BRAIN-2026-30088</span> (Under Review) &nbsp;|&nbsp;
+        <span style="font-family:monospace;">BRAIN-2026-40301</span> (Enrolled)
+      </div>
+
+      <!-- Search Card -->
+      <div class="status-search-card reveal">
+        <div style="text-align:center;margin-bottom:28px;">
+          <div style="width:64px;height:64px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:white;box-shadow:var(--shadow-primary);">
+            <i class="fas fa-search"></i>
+          </div>
+          <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--gray-900);margin-bottom:6px;">Track Your Application</h2>
+          <p style="font-size:0.88rem;color:var(--gray-500);">Enter your Application ID received after submission</p>
+        </div>
+
+        <div class="form-group" style="margin-bottom:16px;">
+          <label class="form-label" for="appIdInput">Application ID <span style="color:var(--error);">*</span></label>
+          <input type="text" id="appIdInput" class="form-control" placeholder="e.g. BRAIN-2026-10125" style="text-transform:uppercase;font-family:monospace;font-size:1rem;">
+          <div class="form-help">Your Application ID was provided after submitting the admission form</div>
+        </div>
+        <div class="form-group" style="margin-bottom:24px;">
+          <label class="form-label" for="phoneInput">Phone Number (Optional)</label>
+          <input type="tel" id="phoneInput" class="form-control" placeholder="e.g. 0333-8044574">
+        </div>
+
+        <button id="checkStatusBtn" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+          <i class="fas fa-search"></i> Check Application Status
+        </button>
+      </div>
+
+      <!-- Not Found -->
+      <div id="statusNotFound" style="display:none;text-align:center;padding:32px;background:var(--white);border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);border:1px solid var(--gray-100);">
+        <div style="width:64px;height:64px;background:rgba(239,68,68,0.10);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem;color:var(--error);">
+          <i class="fas fa-times-circle"></i>
+        </div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:8px;">Application Not Found</h3>
+        <p style="font-size:0.88rem;color:var(--gray-500);margin-bottom:20px;">No application found with this ID. Please check the ID and try again.</p>
+        <a href="admission.html" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i> Apply for Admission</a>
+      </div>
+
+      <!-- Result Card -->
+      <div class="status-result reveal" id="statusResult">
+        <div style="text-align:center;margin-bottom:24px;">
+          <h3 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--gray-900);margin-bottom:12px;">Application Status</h3>
+          <span class="status-badge-large status-approved">🟢 Approved</span>
+        </div>
+
+        <div class="status-info-grid">
+          <div class="status-info-item">
+            <div class="status-info-label">Application ID</div>
+            <div class="status-info-value" id="res-id" style="font-family:monospace;">—</div>
+          </div>
+          <div class="status-info-item">
+            <div class="status-info-label">Applicant Name</div>
+            <div class="status-info-value" id="res-name">—</div>
+          </div>
+          <div class="status-info-item">
+            <div class="status-info-label">Father's Name</div>
+            <div class="status-info-value" id="res-father">—</div>
+          </div>
+          <div class="status-info-item">
+            <div class="status-info-label">Course Applied</div>
+            <div class="status-info-value" id="res-course">—</div>
+          </div>
+          <div class="status-info-item">
+            <div class="status-info-label">Phone</div>
+            <div class="status-info-value" id="res-phone">—</div>
+          </div>
+          <div class="status-info-item">
+            <div class="status-info-label">Application Date</div>
+            <div class="status-info-value" id="res-date">—</div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:16px;background:rgba(16,185,129,0.06);border-radius:var(--radius-sm);border:1px solid rgba(16,185,129,0.15);font-size:0.85rem;color:var(--gray-600);">
+          <i class="fas fa-info-circle" style="color:var(--success);margin-right:6px;"></i>
+          For any queries regarding your admission, please contact us at <strong>0333-8044574</strong> or visit our campus at Darya Khan Road, Bhakkar.
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary btn-sm"><i class="fas fa-phone"></i> Contact College</a>
+          <a href="admission.html" class="btn btn-outline btn-sm"><i class="fas fa-file-alt"></i> New Application</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Status Legend -->
+<section class="section-sm" style="background:var(--gray-50);">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+      <h3 style="font-family:var(--font-heading);font-size:1.2rem;font-weight:700;color:var(--gray-900);margin-bottom:20px;" class="reveal">Application Status Guide</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;" class="reveal">
+        <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--white);border-radius:var(--radius-md);border:1px solid var(--gray-100);">
+          <span class="status-badge-large status-pending" style="font-size:0.82rem;padding:6px 16px;">🟡 Pending</span>
+          <span style="font-size:0.86rem;color:var(--gray-600);">Application received, awaiting review by admin team.</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--white);border-radius:var(--radius-md);border:1px solid var(--gray-100);">
+          <span class="status-badge-large status-review" style="font-size:0.82rem;padding:6px 16px;">🔵 Under Review</span>
+          <span style="font-size:0.86rem;color:var(--gray-600);">Application is being reviewed by the admissions team.</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--white);border-radius:var(--radius-md);border:1px solid var(--gray-100);">
+          <span class="status-badge-large status-approved" style="font-size:0.82rem;padding:6px 16px;">🟢 Approved</span>
+          <span style="font-size:0.86rem;color:var(--gray-600);">Application approved! Visit college with documents.</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--white);border-radius:var(--radius-md);border:1px solid var(--gray-100);">
+          <span class="status-badge-large status-rejected" style="font-size:0.82rem;padding:6px 16px;">🔴 Rejected</span>
+          <span style="font-size:0.86rem;color:var(--gray-600);">Application rejected. Contact college for details.</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;padding:14px 20px;background:var(--white);border-radius:var(--radius-md);border:1px solid var(--gray-100);">
+          <span class="status-badge-large status-enrolled" style="font-size:0.82rem;padding:6px 16px;">⚫ Enrolled</span>
+          <span style="font-size:0.86rem;color:var(--gray-600);">Student successfully enrolled and classes started.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand-logo"><div class="footer-brand-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div><div class="footer-brand-title">The Brain College</div></div></div><p class="footer-brand-desc">Professional computer and vocational education since 2011.</p></div>
+      <div><div class="footer-col-title">Quick Links</div><div class="footer-links"><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a><a href="courses.html" class="footer-link"><i class="fas fa-chevron-right"></i> Courses</a><a href="admission.html" class="footer-link"><i class="fas fa-chevron-right"></i> Apply Now</a><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></div></div>
+      <div><div class="footer-col-title">Courses</div><div class="footer-links"><a href="courses.html#ms-office" class="footer-link"><i class="fas fa-chevron-right"></i> MS Office</a><a href="courses.html#computer-app" class="footer-link"><i class="fas fa-chevron-right"></i> Computer Application</a><a href="courses.html#acit" class="footer-link"><i class="fas fa-chevron-right"></i> ACIT</a></div></div>
+      <div><div class="footer-col-title">Contact</div><div class="footer-contact-items"><div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><div class="footer-contact-text">Darya Khan Road, Bhakkar</div></div><div class="footer-contact-item"><i class="fas fa-phone"></i><div class="footer-contact-text">0333-8044574 | 0345-3994574</div></div></div></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-text">© 2026 The Brain College Bhakkar.</div></div>
+  </div>
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

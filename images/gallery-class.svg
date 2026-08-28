@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <defs>
+    <linearGradient id="cls" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0f2444"/></linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8f9fc"/><stop offset="100%" stop-color="#f0f1f5"/></linearGradient>
+    <linearGradient id="skin_t" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4956a"/><stop offset="100%" stop-color="#c07845"/></linearGradient>
+    <linearGradient id="suit_t" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f2444"/><stop offset="100%" stop-color="#1a3c6e"/></linearGradient>
+    <filter id="cls_sf" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="5" stdDeviation="9" flood-color="#050d1a" flood-opacity="0.35"/></filter>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#cls)"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="480" height="200" fill="rgba(255,255,255,0.015)"/>
+  <!-- Floor -->
+  <rect x="0" y="290" width="480" height="70" fill="#07101e"/>
+  <g stroke="rgba(255,255,255,0.035)" stroke-width="0.8">
+    <line x1="0" y1="305" x2="480" y2="305"/><line x1="0" y1="325" x2="480" y2="325"/>
+    <line x1="80" y1="290" x2="80" y2="360"/><line x1="160" y1="290" x2="160" y2="360"/>
+    <line x1="240" y1="290" x2="240" y2="360"/><line x1="320" y1="290" x2="320" y2="360"/>
+    <line x1="400" y1="290" x2="400" y2="360"/>
+  </g>
+  <line x1="0" y1="290" x2="480" y2="290" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- ── WHITEBOARD / CHALKBOARD ── -->
+  <g filter="url(#cls_sf)">
+    <rect x="60" y="24" width="360" height="180" rx="8" fill="url(#board)"/>
+    <rect x="66" y="30" width="348" height="168" rx="6" fill="#f0f2f8"/>
+    <!-- Board frame -->
+    <rect x="60" y="24" width="360" height="180" rx="8" fill="none" stroke="#1a3c6e" stroke-width="3"/>
+
+    <!-- Board content — teacher teaching -->
+    <!-- Title on board -->
+    <rect x="140" y="44" width="200" height="12" rx="4" fill="#1a3c6e" opacity="0.7"/>
+    <!-- Diagram: Computer network -->
+    <!-- Central computer icon -->
+    <rect x="204" y="68" width="72" height="52" rx="5" fill="rgba(26,60,110,0.12)" stroke="#1a3c6e" stroke-width="1.5"/>
+    <rect x="210" y="74" width="60" height="36" rx="3" fill="rgba(26,60,110,0.08)"/>
+    <!-- Screen lines on diagram -->
+    <rect x="216" y="80" width="40" height="4" rx="2" fill="#1a3c6e" opacity="0.4"/>
+    <rect x="216" y="88" width="32" height="3" rx="1.5" fill="#1a3c6e" opacity="0.3"/>
+    <rect x="216" y="95" width="36" height="3" rx="1.5" fill="#1a3c6e" opacity="0.3"/>
+    <!-- Monitor stand -->
+    <rect x="234" y="120" width="12" height="10" rx="2" fill="#1a3c6e" opacity="0.4"/>
+    <!-- Arrows from center -->
+    <line x1="204" y1="94" x2="160" y2="94" stroke="#e8a020" stroke-width="2"/>
+    <polygon points="160,90 148,94 160,98" fill="#e8a020"/>
+    <line x1="276" y1="94" x2="320" y2="94" stroke="#e8a020" stroke-width="2"/>
+    <polygon points="320,90 332,94 320,98" fill="#e8a020"/>
+    <line x1="240" y1="68" x2="240" y2="50" stroke="#e8a020" stroke-width="2"/>
+    <polygon points="236,50 240,38 244,50" fill="#e8a020"/>
+    <!-- Connected boxes -->
+    <rect x="108" y="74" width="44" height="38" rx="5" fill="rgba(37,84,160,0.12)" stroke="#2554a0" stroke-width="1.5"/>
+    <text x="130" y="97" text-anchor="middle" font-size="9" fill="#1a3c6e" font-family="Inter,sans-serif" font-weight="700">Data</text>
+    <rect x="328" y="74" width="44" height="38" rx="5" fill="rgba(37,84,160,0.12)" stroke="#2554a0" stroke-width="1.5"/>
+    <text x="350" y="97" text-anchor="middle" font-size="9" fill="#1a3c6e" font-family="Inter,sans-serif" font-weight="700">User</text>
+    <rect x="214" y="26" width="52" height="28" rx="5" fill="rgba(37,84,160,0.12)" stroke="#2554a0" stroke-width="1.5"/>
+    <text x="240" y="44" text-anchor="middle" font-size="8" fill="#1a3c6e" font-family="Inter,sans-serif" font-weight="700">Server</text>
+    <!-- Labels -->
+    <text x="240" y="158" text-anchor="middle" font-size="8" fill="#6b7280" font-family="Inter,sans-serif">Computer Network Architecture</text>
+    <!-- Horizontal axis line on board -->
+    <line x1="80" y1="140" x2="400" y2="140" stroke="rgba(26,60,110,0.12)" stroke-width="1" stroke-dasharray="6 3"/>
+    <!-- Formula text -->
+    <rect x="80" y="148" width="120" height="5" rx="2" fill="#9ca3af" opacity="0.5"/>
+    <rect x="80" y="158" width="88" height="4" rx="2" fill="#9ca3af" opacity="0.4"/>
+    <rect x="310" y="150" width="100" height="5" rx="2" fill="#e8a020" opacity="0.3"/>
+    <rect x="310" y="160" width="76" height="4" rx="2" fill="#9ca3af" opacity="0.3"/>
+  </g>
+
+  <!-- Marker tray -->
+  <rect x="60" y="200" width="360" height="8" rx="4" fill="#e5e7eb"/>
+  <rect x="68" y="199" width="10" height="10" rx="3" fill="#ef4444"/>
+  <rect x="82" y="199" width="10" height="10" rx="3" fill="#1a3c6e"/>
+  <rect x="96" y="199" width="10" height="10" rx="3" fill="#10b981"/>
+  <rect x="110" y="199" width="10" height="10" rx="3" fill="#e8a020"/>
+
+  <!-- ── TEACHER (standing at board) ── -->
+  <g filter="url(#cls_sf)">
+    <!-- Body suit -->
+    <rect x="18" y="198" width="44" height="100" rx="10" fill="url(#suit_t)"/>
+    <!-- Shirt -->
+    <rect x="28" y="198" width="24" height="60" rx="6" fill="white" opacity="0.9"/>
+    <!-- Jacket lapels -->
+    <path d="M18 198 L26 198 L40 236 L18 248Z" fill="#0a1628"/>
+    <path d="M62 198 L54 198 L40 236 L62 248Z" fill="#0a1628"/>
+    <!-- Tie -->
+    <path d="M36 200 L44 200 L45 240 L40 248 L35 240Z" fill="#e8a020"/>
+    <!-- Neck -->
+    <rect x="30" y="184" width="20" height="18" rx="7" fill="url(#skin_t)"/>
+    <!-- Head -->
+    <ellipse cx="40" cy="170" rx="28" ry="30" fill="url(#skin_t)"/>
+    <!-- Hair -->
+    <path d="M12 158 Q15 138 40 135 Q65 138 68 158 Q65 142 40 139 Q15 142 12 158Z" fill="#1a0800" opacity="0.9"/>
+    <!-- Glasses -->
+    <rect x="26" y="163" width="10" height="8" rx="3" fill="none" stroke="#2d1a0a" stroke-width="1.5"/>
+    <rect x="42" y="163" width="10" height="8" rx="3" fill="none" stroke="#2d1a0a" stroke-width="1.5"/>
+    <line x1="36" y1="167" x2="42" y2="167" stroke="#2d1a0a" stroke-width="1.5"/>
+    <!-- Eyes -->
+    <ellipse cx="31" cy="167" rx="2.5" ry="2.5" fill="#1a1a1a"/>
+    <ellipse cx="47" cy="167" rx="2.5" ry="2.5" fill="#1a1a1a"/>
+    <!-- Smile professional -->
+    <path d="M34 178 Q40 183 46 178" stroke="rgba(0,0,0,0.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Pointer arm raised -->
+    <rect x="62" y="170" width="14" height="48" rx="6" fill="url(#suit_t)" transform="rotate(-25 62 170)"/>
+    <rect x="60" y="165" width="3" height="60" rx="1.5" fill="#e8a020" transform="rotate(-25 60 165)"/><!-- pointer stick -->
+    <!-- Other arm -->
+    <rect x="4" y="210" width="14" height="50" rx="6" fill="url(#suit_t)"/>
+  </g>
+
+  <!-- ── STUDENTS (seated rows) ── -->
+  <!-- Row of student desks -->
+  <g opacity="0.85">
+    <!-- Desk 1 -->
+    <rect x="100" y="256" width="80" height="8" rx="3" fill="#1a3c6e"/>
+    <!-- Desk 2 -->
+    <rect x="200" y="256" width="80" height="8" rx="3" fill="#1a3c6e"/>
+    <!-- Desk 3 -->
+    <rect x="300" y="256" width="80" height="8" rx="3" fill="#1a3c6e"/>
+    <!-- Desk 4 -->
+    <rect x="390" y="256" width="80" height="8" rx="3" fill="#1a3c6e"/>
+
+    <!-- Student heads behind desks (simplified) -->
+    <!-- Student 1 - girl with hijab -->
+    <ellipse cx="140" cy="238" rx="14" ry="16" fill="#0f2444"/>
+    <ellipse cx="140" cy="242" rx="10" ry="12" fill="#c07845"/>
+    <path d="M126 238 Q127 248 131 256 Q136 259 140 260 Q144 259 149 256 Q153 248 154 238" fill="#1a3c6e"/>
+    <ellipse cx="136" cy="240" rx="2.5" ry="3" fill="#1a1a1a"/>
+    <ellipse cx="144" cy="240" rx="2.5" ry="3" fill="#1a1a1a"/>
+
+    <!-- Student 2 - boy -->
+    <ellipse cx="240" cy="238" rx="13" ry="14" fill="#c07845"/>
+    <path d="M227 230 Q229 218 240 216 Q251 218 253 230 Q251 220 240 218 Q229 220 227 230Z" fill="#1a0800"/>
+    <ellipse cx="236" cy="237" rx="2.5" ry="3" fill="#1a1a1a"/>
+    <ellipse cx="244" cy="237" rx="2.5" ry="3" fill="#1a1a1a"/>
+
+    <!-- Student 3 - girl with hijab -->
+    <ellipse cx="340" cy="238" rx="14" ry="16" fill="#2554a0"/>
+    <ellipse cx="340" cy="242" rx="10" ry="12" fill="#d4956a"/>
+    <path d="M326 238 Q327 248 331 256 Q336 259 340 260 Q344 259 349 256 Q353 248 354 238" fill="#1a3c6e"/>
+    <ellipse cx="336" cy="240" rx="2.5" ry="3" fill="#1a1a1a"/>
+    <ellipse cx="344" cy="240" rx="2.5" ry="3" fill="#1a1a1a"/>
+
+    <!-- Student 4 - boy -->
+    <ellipse cx="430" cy="238" rx="13" ry="14" fill="#b87040"/>
+    <path d="M417 230 Q419 218 430 216 Q441 218 443 230 Q441 220 430 218 Q419 220 417 230Z" fill="#0a0500"/>
+    <ellipse cx="426" cy="237" rx="2.5" ry="3" fill="#1a1a1a"/>
+    <ellipse cx="434" cy="237" rx="2.5" ry="3" fill="#1a1a1a"/>
+
+    <!-- Student notebooks on desks -->
+    <rect x="118" y="250" width="24" height="18" rx="2" fill="white" opacity="0.7"/>
+    <rect x="122" y="253" width="14" height="3" rx="1" fill="#9ca3af"/>
+    <rect x="122" y="258" width="10" height="2" rx="1" fill="#9ca3af"/>
+    <rect x="218" y="250" width="24" height="18" rx="2" fill="white" opacity="0.7"/>
+    <rect x="222" y="253" width="14" height="3" rx="1" fill="#9ca3af"/>
+    <rect x="318" y="250" width="24" height="18" rx="2" fill="white" opacity="0.7"/>
+    <rect x="322" y="253" width="14" height="3" rx="1" fill="#9ca3af"/>
+    <rect x="408" y="250" width="24" height="18" rx="2" fill="white" opacity="0.7"/>
+    <rect x="412" y="253" width="14" height="3" rx="1" fill="#9ca3af"/>
+  </g>
+
+  <!-- Room sign -->
+  <rect x="168" y="8" width="144" height="14" rx="4" fill="rgba(232,160,32,0.15)" stroke="rgba(232,160,32,0.3)" stroke-width="1"/>
+  <text x="240" y="19" text-anchor="middle" font-size="8" fill="#f5bc50" font-family="Inter,sans-serif" font-weight="700">CLASSROOM — BRAIN COLLEGE</text>
+</svg>

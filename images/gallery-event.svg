@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <defs>
+    <linearGradient id="evbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0f2444"/></linearGradient>
+    <linearGradient id="stage" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3c6e"/><stop offset="100%" stop-color="#0f2444"/></linearGradient>
+    <linearGradient id="curtain" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f2444"/><stop offset="100%" stop-color="#1a3c6e"/></linearGradient>
+    <radialGradient id="spotlight" cx="50%" cy="0%" r="80%"><stop offset="0%" stop-color="#e8a020" stop-opacity="0.25"/><stop offset="100%" stop-color="#0a1628" stop-opacity="0"/></radialGradient>
+    <filter id="ev_sf" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#050d1a" flood-opacity="0.4"/></filter>
+  </defs>
+
+  <rect width="480" height="360" fill="url(#evbg)"/>
+  <!-- Spotlight effect -->
+  <ellipse cx="240" cy="0" rx="250" ry="220" fill="url(#spotlight)"/>
+
+  <!-- Stage platform -->
+  <rect x="80" y="230" width="320" height="20" rx="4" fill="url(#stage)" filter="url(#ev_sf)"/>
+  <rect x="80" y="248" width="320" height="6" rx="3" fill="#0a1628"/>
+  <!-- Stage steps -->
+  <rect x="160" y="248" width="160" height="8" rx="3" fill="#1a3c6e" opacity="0.6"/>
+  <rect x="180" y="254" width="120" height="8" rx="3" fill="#1a3c6e" opacity="0.4"/>
+
+  <!-- Curtains left and right -->
+  <path d="M0 0 Q60 80 40 200 Q20 280 0 360 L80 360 L80 0Z" fill="url(#curtain)" opacity="0.7"/>
+  <path d="M480 0 Q420 80 440 200 Q460 280 480 360 L400 360 L400 0Z" fill="url(#curtain)" opacity="0.7"/>
+  <!-- Curtain folds -->
+  <path d="M0 0 Q30 90 20 180 Q10 240 0 360" stroke="rgba(255,255,255,0.06)" stroke-width="8" fill="none"/>
+  <path d="M40 0 Q70 90 55 180" stroke="rgba(255,255,255,0.04)" stroke-width="6" fill="none"/>
+  <path d="M480 0 Q450 90 460 180 Q470 240 480 360" stroke="rgba(255,255,255,0.06)" stroke-width="8" fill="none"/>
+
+  <!-- Curtain rod -->
+  <rect x="0" y="0" width="480" height="8" rx="2" fill="#1a3c6e"/>
+
+  <!-- ── BANNER ── -->
+  <g filter="url(#ev_sf)">
+    <rect x="100" y="16" width="280" height="52" rx="10" fill="#1a3c6e"/>
+    <rect x="103" y="19" width="274" height="46" rx="8" fill="rgba(232,160,32,0.15)"/>
+    <!-- Banner text -->
+    <text x="240" y="40" text-anchor="middle" font-size="13" fill="#f5bc50" font-family="Inter,sans-serif" font-weight="900" letter-spacing="0.5">CERTIFICATE DISTRIBUTION</text>
+    <text x="240" y="56" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="Inter,sans-serif">The Brain College Bhakkar — Batch 2025</text>
+    <!-- Banner ribbon -->
+    <rect x="100" y="16" width="14" height="52" rx="3" fill="#e8a020" opacity="0.6"/>
+    <rect x="366" y="16" width="14" height="52" rx="3" fill="#e8a020" opacity="0.6"/>
+  </g>
+
+  <!-- ── PODIUM ── -->
+  <g filter="url(#ev_sf)">
+    <polygon points="200,230 280,230 290,200 190,200" fill="#0f2444"/>
+    <rect x="210" y="180" width="60" height="22" rx="4" fill="#1a3c6e"/>
+    <rect x="213" y="183" width="52" height="16" rx="3" fill="rgba(232,160,32,0.15)"/>
+    <!-- Mic -->
+    <rect x="237" y="155" width="6" height="28" rx="3" fill="#e8a020" opacity="0.8"/>
+    <ellipse cx="240" cy="152" rx="6" ry="8" fill="#0d1b2e" stroke="#e8a020" stroke-width="1.5"/>
+    <line x1="240" y1="183" x2="220" y2="192" stroke="#e8a020" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- ── SPEAKER at podium ── -->
+  <g filter="url(#ev_sf)">
+    <rect x="216" y="142" width="12" height="14" rx="5" fill="#c07845"/><!-- neck -->
+    <ellipse cx="222" cy="130" rx="18" ry="20" fill="#c07845"/><!-- head -->
+    <!-- Hair -->
+    <path d="M204 122 Q206 106 222 103 Q238 106 240 122 Q238 108 222 105 Q206 108 204 122Z" fill="#1a0800" opacity="0.8"/>
+    <!-- Eyes -->
+    <ellipse cx="217" cy="127" rx="3" ry="3.5" fill="#1a1a1a"/>
+    <ellipse cx="227" cy="127" rx="3" ry="3.5" fill="#1a1a1a"/>
+    <circle cx="218" cy="126" r="1.2" fill="white"/>
+    <circle cx="228" cy="126" r="1.2" fill="white"/>
+    <!-- Smile speaking -->
+    <path d="M217 136 Q222 141 227 136" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Suit body -->
+    <rect x="204" y="156" width="36" height="80" rx="8" fill="#0f2444"/>
+    <rect x="216" y="156" width="12" height="50" rx="4" fill="white" opacity="0.85"/>
+    <path d="M204 156 L212 156 L222 186 L204 196Z" fill="#0a1628"/>
+    <path d="M240 156 L232 156 L222 186 L240 196Z" fill="#0a1628"/>
+    <path d="M218 158 L222 152 L226 158 L225 196 L222 200 L219 196Z" fill="#e8a020"/>
+  </g>
+
+  <!-- ── SEATED AUDIENCE (simplified) ── -->
+  <g opacity="0.75">
+    <!-- Row 1 - closest -->
+    <g transform="translate(0, 0)">
+      <ellipse cx="100" cy="310" rx="14" ry="16" fill="#0f2444"/>
+      <ellipse cx="100" cy="315" rx="10" ry="12" fill="#c07845"/>
+      <path d="M86 310 Q87 324 94 330 L100 333 L106 330 Q113 324 114 310" fill="#1a3c6e"/>
+      <path d="M86 306 Q89 292 100 290 Q111 292 114 306 Q112 294 100 291 Q88 294 86 306Z" fill="#0f2444"/>
+
+      <ellipse cx="155" cy="308" rx="13" ry="14" fill="#c07845"/>
+      <path d="M142 300 Q144 288 155 286 Q166 288 168 300 Q166 290 155 288 Q144 290 142 300Z" fill="#1a0800" opacity="0.8"/>
+
+      <ellipse cx="320" cy="310" rx="14" ry="16" fill="#2554a0"/>
+      <ellipse cx="320" cy="314" rx="10" ry="12" fill="#d4956a"/>
+      <path d="M306 310 Q307 324 314 330 L320 333 L326 330 Q333 324 334 310" fill="#1a3c6e"/>
+      <path d="M306 306 Q309 292 320 290 Q331 292 334 306 Q332 294 320 291 Q308 294 306 306Z" fill="#2554a0"/>
+
+      <ellipse cx="380" cy="308" rx="13" ry="14" fill="#b87040"/>
+      <path d="M367 300 Q369 288 380 286 Q391 288 393 300 Q391 290 380 288 Q369 290 367 300Z" fill="#0a0500" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- ── CERTIFICATE BEING GIVEN ── -->
+  <g filter="url(#ev_sf)" transform="translate(300, 160)">
+    <rect width="90" height="64" rx="8" fill="#f5bc50"/>
+    <rect x="4" y="4" width="82" height="56" rx="6" fill="white" opacity="0.95"/>
+    <!-- Certificate content -->
+    <rect x="14" y="12" width="62" height="6" rx="2" fill="#1a3c6e" opacity="0.6"/>
+    <text x="45" y="30" text-anchor="middle" font-size="7" fill="#1a3c6e" font-family="Inter,sans-serif" font-weight="700">CERTIFICATE</text>
+    <text x="45" y="38" text-anchor="middle" font-size="6" fill="#6b7280" font-family="Inter,sans-serif">of Completion</text>
+    <!-- Seal -->
+    <circle cx="45" cy="52" r="8" fill="none" stroke="#e8a020" stroke-width="1.5"/>
+    <text x="45" y="56" text-anchor="middle" font-size="7" fill="#e8a020">★</text>
+    <!-- Ribbon banner on cert -->
+    <rect x="4" y="4" width="82" height="4" rx="6" fill="#e8a020" opacity="0.5"/>
+  </g>
+
+  <!-- Balloons decorative -->
+  <ellipse cx="420" cy="60" rx="16" ry="20" fill="#ef4444" opacity="0.6"/>
+  <line x1="420" y1="80" x2="416" y2="120" stroke="#ef4444" stroke-width="1" opacity="0.5"/>
+  <ellipse cx="450" cy="50" rx="14" ry="17" fill="#e8a020" opacity="0.5"/>
+  <line x1="450" y1="67" x2="448" y2="110" stroke="#e8a020" stroke-width="1" opacity="0.5"/>
+  <ellipse cx="30" cy="70" rx="14" ry="18" fill="#1a3c6e" opacity="0.6"/>
+  <line x1="30" y1="88" x2="32" y2="130" stroke="#1a3c6e" stroke-width="1" opacity="0.5"/>
+
+  <!-- Lights at top -->
+  <circle cx="150" cy="12" r="6" fill="#e8a020" opacity="0.8"/>
+  <circle cx="240" cy="8" r="8" fill="#e8a020" opacity="0.9"/>
+  <circle cx="330" cy="12" r="6" fill="#e8a020" opacity="0.8"/>
+  <line x1="80" y1="10" x2="400" y2="10" stroke="rgba(232,160,32,0.3)" stroke-width="1.5"/>
+</svg>

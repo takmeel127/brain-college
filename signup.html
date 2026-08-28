@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — The Brain College Bhakkar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    body{min-height:100vh;background:linear-gradient(135deg,#0a1628 0%,#0f2444 40%,#1a3c6e 100%);display:flex;align-items:flex-start;justify-content:center;padding:24px;overflow-x:hidden;overflow-y:auto;}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(37,84,160,0.35) 0%,transparent 70%);top:-100px;right:-100px;animation:orb-drift 14s ease-in-out infinite;}
+    .orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(232,160,32,0.15) 0%,transparent 70%);bottom:-80px;left:-80px;animation:orb-drift 12s ease-in-out infinite reverse;}
+    @keyframes orb-drift{0%,100%{transform:translate(0,0);}50%{transform:translate(20px,-15px);}}
+    .auth-card{background:white;border-radius:24px;padding:44px 40px;width:100%;max-width:480px;margin:auto;box-shadow:0 30px 80px rgba(0,0,0,0.4);animation:auth-in 0.45s cubic-bezier(0.4,0,0.2,1);}
+    @keyframes auth-in{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+    .auth-logo{display:flex;flex-direction:column;align-items:center;margin-bottom:28px;}
+    .auth-logo-icon{width:56px;height:56px;background:linear-gradient(135deg,#1a3c6e,#2554a0);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;color:white;margin-bottom:10px;box-shadow:0 8px 25px rgba(26,60,110,0.3);font-family:'Playfair Display',serif;overflow:hidden;}
+    .auth-logo-icon img{width:100%;height:100%;object-fit:cover;border-radius:16px;display:block;}
+    .auth-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#111827;}
+    .auth-sub{font-size:0.84rem;color:#6b7280;margin-top:4px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .form-group{margin-bottom:14px;}
+    .form-label{display:block;font-size:0.8rem;font-weight:600;color:#374151;margin-bottom:5px;}
+    .form-label span{color:#ef4444;margin-left:2px;}
+    .input-wrap{position:relative;}
+    .input-wrap i{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#9ca3af;font-size:0.85rem;pointer-events:none;}
+    .form-input{width:100%;padding:10px 13px 10px 36px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:0.88rem;color:#1f2937;outline:none;transition:all 0.2s;font-family:inherit;background:white;}
+    .form-input:focus{border-color:#1a3c6e;box-shadow:0 0 0 3px rgba(26,60,110,0.08);}
+    select.form-input{cursor:pointer;padding-left:36px;}
+    .toggle-pw{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#9ca3af;cursor:pointer;font-size:0.85rem;}
+    .toggle-pw:hover{color:#1a3c6e;}
+    .auth-error{display:none;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:10px 14px;font-size:0.83rem;color:#991b1b;margin-bottom:14px;}
+    .auth-error.show{display:flex;align-items:center;gap:8px;}
+    .auth-submit{width:100%;padding:13px;background:linear-gradient(135deg,#1a3c6e,#2554a0);color:white;border:none;border-radius:10px;font-size:0.95rem;font-weight:700;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;box-shadow:0 4px 15px rgba(26,60,110,0.3);margin-top:6px;}
+    .auth-submit:hover{transform:translateY(-1px);box-shadow:0 8px 25px rgba(26,60,110,0.4);}
+    .auth-submit:disabled{opacity:0.7;cursor:not-allowed;transform:none;}
+    .auth-footer{text-align:center;margin-top:16px;font-size:0.84rem;color:#6b7280;}
+    .auth-footer a{color:#1a3c6e;font-weight:600;text-decoration:none;}
+    .auth-footer a:hover{text-decoration:underline;}
+    .pw-strength{height:4px;border-radius:2px;background:#e5e7eb;margin-top:6px;overflow:hidden;}
+    .pw-strength-fill{height:100%;border-radius:2px;width:0%;transition:width 0.3s,background 0.3s;}
+    .pw-hint{font-size:0.72rem;color:#9ca3af;margin-top:3px;}
+    @media(max-width:480px){.form-row{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="auth-card">
+  <div class="auth-logo">
+    <div class="auth-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:18px;"></div>
+    <div class="auth-title">Create Account</div>
+    <div class="auth-sub">Join The Brain College Bhakkar — Free</div>
+  </div>
+
+  <div class="auth-error" id="signupError">
+    <i class="fas fa-exclamation-circle"></i>
+    <span id="signupErrorMsg"></span>
+  </div>
+
+  <form id="signupForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Full Name <span>*</span></label>
+        <div class="input-wrap">
+          <i class="fas fa-user"></i>
+          <input type="text" id="suName" class="form-input" placeholder="Muhammad Ali" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone <span>*</span></label>
+        <div class="input-wrap">
+          <i class="fas fa-phone"></i>
+          <input type="tel" id="suPhone" class="form-input" placeholder="0333-XXXXXXX" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Email Address <span>*</span></label>
+      <div class="input-wrap">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="suEmail" class="form-input" placeholder="your@email.com" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Select Course</label>
+      <div class="input-wrap">
+        <i class="fas fa-book"></i>
+        <select id="suCourse" class="form-input">
+          <option value="">— Select Interested Course —</option>
+          <option>MS Office (3 Months)</option>
+          <option>Computer Application (6 Months)</option>
+          <option>Advance Certificate in IT — ACIT (12 Months)</option>
+          <option>Typing English &amp; Urdu (3 Months)</option>
+          <option>Shorthand (6 Months)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Password <span>*</span></label>
+        <div class="input-wrap">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="suPassword" class="form-input" placeholder="Min 6 characters" required oninput="checkPwStrength(this.value)">
+          <span class="toggle-pw fas fa-eye" id="togglePw1"></span>
+        </div>
+        <div class="pw-strength"><div class="pw-strength-fill" id="pwStrengthFill"></div></div>
+        <div class="pw-hint" id="pwHint">Enter a strong password</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Confirm Password <span>*</span></label>
+        <div class="input-wrap">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="suConfirm" class="form-input" placeholder="Repeat password" required>
+          <span class="toggle-pw fas fa-eye" id="togglePw2"></span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:16px;">
+      <input type="checkbox" id="suAgree" style="margin-top:3px;accent-color:#1a3c6e;width:15px;height:15px;" required>
+      <label for="suAgree" style="font-size:0.82rem;color:#6b7280;cursor:pointer;line-height:1.5;">I agree to the <a href="#" style="color:#1a3c6e;font-weight:600;">Terms</a> and consent to Brain College using my information for educational purposes.</label>
+    </div>
+
+    <button type="submit" class="auth-submit" id="signupBtn">
+      <i class="fas fa-user-plus"></i> Create Free Account
+    </button>
+  </form>
+
+  <p class="auth-footer">Already have an account? <a href="login.html">Login here</a></p>
+  <p class="auth-footer" style="margin-top:6px;"><a href="get-started.html"><i class="fas fa-arrow-left"></i> Back</a></p>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script>
+  if (BC_AUTH.isLoggedIn()) window.location.href = 'index.html';
+
+  function checkPwStrength(pw) {
+    const fill = document.getElementById('pwStrengthFill');
+    const hint = document.getElementById('pwHint');
+    let score = 0;
+    if (pw.length >= 6) score++;
+    if (pw.length >= 10) score++;
+    if (/[A-Z]/.test(pw)) score++;
+    if (/[0-9]/.test(pw)) score++;
+    if (/[^A-Za-z0-9]/.test(pw)) score++;
+    const map = [[0,'0%','#e5e7eb',''], [1,'25%','#ef4444','Weak'], [2,'50%','#f59e0b','Fair'], [3,'65%','#3b82f6','Good'], [4,'80%','#10b981','Strong'], [5,'100%','#059669','Very Strong']];
+    const s = map[Math.min(score, 5)];
+    fill.style.width = s[1]; fill.style.background = s[2]; hint.textContent = s[3];
+  }
+
+  ['togglePw1','togglePw2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('click', function() {
+      const inp = this.previousElementSibling;
+      inp.type = inp.type === 'password' ? 'text' : 'password';
+      this.className = 'toggle-pw fas ' + (inp.type === 'text' ? 'fa-eye-slash' : 'fa-eye');
+    });
+  });
+
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name     = document.getElementById('suName').value.trim();
+    const phone    = document.getElementById('suPhone').value.trim();
+    const email    = document.getElementById('suEmail').value.trim();
+    const course   = document.getElementById('suCourse').value;
+    const pw       = document.getElementById('suPassword').value;
+    const confirm  = document.getElementById('suConfirm').value;
+    const btn      = document.getElementById('signupBtn');
+    const errEl    = document.getElementById('signupError');
+    const errMsg   = document.getElementById('signupErrorMsg');
+    errEl.classList.remove('show');
+
+    if (pw.length < 6) { errMsg.textContent = 'Password must be at least 6 characters.'; errEl.classList.add('show'); return; }
+    if (pw !== confirm) { errMsg.textContent = 'Passwords do not match.'; errEl.classList.add('show'); return; }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating account...';
+
+    setTimeout(() => {
+      const result = BC_AUTH.signup({ name, phone, email, password: pw, course });
+      if (result.ok) {
+        btn.innerHTML = '<i class="fas fa-check"></i> Account created!';
+        btn.style.background = 'linear-gradient(135deg,#10b981,#059669)';
+        setTimeout(() => window.location.href = 'index.html', 700);
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-user-plus"></i> Create Free Account';
+        btn.style.background = '';
+        errMsg.textContent = result.msg;
+        errEl.classList.add('show');
+      }
+    }, 700);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" fill="none">
+  <defs>
+    <linearGradient id="ab1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3c6e"/>
+      <stop offset="100%" style="stop-color:#2554a0"/>
+    </linearGradient>
+    <linearGradient id="ab2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8a020"/>
+      <stop offset="100%" style="stop-color:#f5bc50"/>
+    </linearGradient>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f2444" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="radial2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a3c6e;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0f2444;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="250" cy="210" rx="220" ry="180" fill="url(#radial2)"/>
+
+  <!-- College building outline -->
+  <g filter="url(#shadow2)">
+    <!-- Main building body -->
+    <rect x="100" y="200" width="300" height="180" rx="8" fill="url(#ab1)"/>
+    <!-- Roof -->
+    <polygon points="80,200 250,100 420,200" fill="#0f2444"/>
+    <polygon points="90,200 250,110 410,200" fill="#1a3c6e"/>
+
+    <!-- Windows row 1 -->
+    <rect x="130" y="220" width="50" height="40" rx="4" fill="rgba(255,255,255,0.12)"/>
+    <rect x="225" y="220" width="50" height="40" rx="4" fill="rgba(255,255,255,0.12)"/>
+    <rect x="320" y="220" width="50" height="40" rx="4" fill="rgba(255,255,255,0.12)"/>
+
+    <!-- Window light effects -->
+    <rect x="132" y="222" width="46" height="36" rx="3" fill="rgba(232,160,32,0.15)"/>
+    <rect x="227" y="222" width="46" height="36" rx="3" fill="rgba(255,255,255,0.08)"/>
+    <rect x="322" y="222" width="46" height="36" rx="3" fill="rgba(232,160,32,0.10)"/>
+
+    <!-- Windows row 2 -->
+    <rect x="130" y="275" width="50" height="40" rx="4" fill="rgba(255,255,255,0.10)"/>
+    <rect x="225" y="275" width="50" height="40" rx="4" fill="rgba(255,255,255,0.15)"/>
+    <rect x="320" y="275" width="50" height="40" rx="4" fill="rgba(255,255,255,0.10)"/>
+
+    <!-- Door -->
+    <rect x="210" y="320" width="80" height="60" rx="6" fill="#0f2444"/>
+    <rect x="215" y="325" width="70" height="55" rx="4" fill="rgba(232,160,32,0.12)"/>
+    <circle cx="260" cy="355" r="3" fill="#e8a020" opacity="0.8"/>
+
+    <!-- Pillars -->
+    <rect x="200" y="200" width="12" height="120" rx="2" fill="#0f2444" opacity="0.5"/>
+    <rect x="288" y="200" width="12" height="120" rx="2" fill="#0f2444" opacity="0.5"/>
+
+    <!-- Sign board -->
+    <rect x="185" y="195" width="130" height="22" rx="4" fill="url(#ab2)"/>
+    <text x="250" y="210" text-anchor="middle" font-size="9" fill="#0f2444" font-weight="700">THE BRAIN COLLEGE</text>
+  </g>
+
+  <!-- Flag on top -->
+  <line x1="250" y1="110" x2="250" y2="60" stroke="#e8a020" stroke-width="2"/>
+  <rect x="250" y="60" width="30" height="20" rx="2" fill="#e8a020" opacity="0.9"/>
+
+  <!-- Trees -->
+  <g opacity="0.8">
+    <rect x="68" y="340" width="10" height="40" rx="3" fill="#0f2444"/>
+    <ellipse cx="73" cy="330" rx="22" ry="28" fill="#1a3c6e" opacity="0.7"/>
+    <ellipse cx="73" cy="325" rx="18" ry="22" fill="#2554a0" opacity="0.5"/>
+  </g>
+  <g opacity="0.8">
+    <rect x="422" y="340" width="10" height="40" rx="3" fill="#0f2444"/>
+    <ellipse cx="427" cy="330" rx="22" ry="28" fill="#1a3c6e" opacity="0.7"/>
+    <ellipse cx="427" cy="325" rx="18" ry="22" fill="#2554a0" opacity="0.5"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="60" y="378" width="380" height="8" rx="4" fill="#0f2444" opacity="0.3"/>
+
+  <!-- Stats floating cards -->
+  <g transform="translate(20, 120)" filter="url(#shadow2)">
+    <rect width="110" height="64" rx="12" fill="white"/>
+    <text x="14" y="26" font-size="11" fill="#6b7280" font-weight="500">Est. Since</text>
+    <text x="14" y="50" font-size="22" fill="#1a3c6e" font-weight="900">2011</text>
+  </g>
+
+  <g transform="translate(370, 110)" filter="url(#shadow2)">
+    <rect width="110" height="64" rx="12" fill="white"/>
+    <text x="14" y="26" font-size="11" fill="#6b7280" font-weight="500">Students</text>
+    <text x="14" y="50" font-size="22" fill="#e8a020" font-weight="900">5000+</text>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="60" cy="60" r="20" fill="none" stroke="rgba(232,160,32,0.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <circle cx="450" cy="70" r="15" fill="rgba(37,84,160,0.1)"/>
+  <circle cx="30" cy="300" r="8" fill="rgba(232,160,32,0.15)"/>
+  <circle cx="470" cy="280" r="6" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Stars -->
+  <circle cx="80" cy="170" r="2" fill="#e8a020" opacity="0.7"/>
+  <circle cx="420" cy="160" r="2" fill="#e8a020" opacity="0.5"/>
+  <circle cx="350" cy="50" r="3" fill="rgba(255,255,255,0.3)"/>
+</svg>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — The Brain College Bhakkar</title>
+  <meta name="description" content="Explore professional courses at The Brain College Bhakkar — MS Office, Computer Application, ACIT, Typing, Shorthand. All courses are nationally certified.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    .course-detail-section { padding: 60px 0; border-bottom: 1px solid var(--gray-100); }
+    .course-detail-section:last-child { border-bottom: none; }
+    .learn-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+    .learn-item { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--gray-700); padding: 10px 14px; background: var(--gray-50); border-radius: var(--radius-sm); }
+    .learn-item i { color: var(--success); }
+    @media(max-width:640px) { .learn-list { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo"><img src="images/logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"></div>
+    <div class="preloader-text">Loading...</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+</div>
+
+<a href="https://wa.me/923338044574" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<div class="mobile-overlay"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo"><div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div class="nav-logo-text"><div class="nav-logo-title">Brain College</div><div class="nav-logo-sub">Bhakkar</div></div></div>
+    <div class="mobile-nav-close"><i class="fas fa-times"></i></div>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+    <a href="courses.html" class="mobile-nav-link"><i class="fas fa-book"></i> Courses</a>
+    <a href="faculty.html" class="mobile-nav-link"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+    <a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i> Gallery</a>
+    <a href="admission-status.html" class="mobile-nav-link"><i class="fas fa-search"></i> Admission Status</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  <a href="admission.html" class="mobile-nav-apply">Apply for Admission 2026</a>
+</nav>
+
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div>
+        <div class="nav-logo-text"><div class="nav-logo-title">The Brain College</div><div class="nav-logo-sub">Bhakkar — Est. 2011</div></div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link active">Courses</a>
+        <a href="faculty.html" class="nav-link">Faculty</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="admission-status.html" class="nav-link">Status</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="admission.html" class="nav-apply-btn">Apply Now 2026</a>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner page-banner-courses">
+  <div class="container">
+    <div class="page-banner-inner">
+      <div class="breadcrumb" style="margin-bottom:12px;">
+        <a href="index.html" class="breadcrumb-item">Home</a>
+        <span class="breadcrumb-sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="breadcrumb-item active">Courses</span>
+      </div>
+      <h1 class="page-banner-title">Our Courses</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1rem;margin-top:8px;">Professional, certified programs for a successful career</p>
+    </div>
+  </div>
+</div>
+
+<!-- Course Cards Overview -->
+<section class="section courses-section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="badge"><i class="fas fa-book"></i> All Programs</span>
+      <h2 class="section-title">Choose Your <span>Course</span></h2>
+      <p class="section-subtitle">All courses include practical training, study materials, and nationally recognized certification upon completion.</p>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card"><div class="course-card-thumb"><span class="course-num">01</span><span class="course-cat-badge">Computer</span><span class="course-status-badge">Available</span><i class="fas fa-desktop course-icon"></i></div><div class="course-card-body"><h3 class="course-card-name">MS Office</h3><p class="course-card-desc">Master Microsoft Word, Excel, PowerPoint, and Access for professional office work and career readiness.</p><div class="course-card-meta"><div class="course-meta-item"><i class="fas fa-clock"></i> 3 Months</div><div class="course-meta-item"><i class="fas fa-certificate"></i> Certified</div></div><div class="course-card-footer"><a href="#ms-office" class="btn btn-outline btn-sm">View Details</a><a href="admission.html" class="btn btn-primary btn-sm">Apply Now</a></div></div></div>
+
+      <div class="course-card"><div class="course-card-thumb"><span class="course-num">02</span><span class="course-cat-badge">Computer</span><span class="course-status-badge">Available</span><i class="fas fa-laptop course-icon"></i></div><div class="course-card-body"><h3 class="course-card-name">Computer Application</h3><p class="course-card-desc">Comprehensive computer skills including office tools, internet, and practical applications for modern workplaces.</p><div class="course-card-meta"><div class="course-meta-item"><i class="fas fa-clock"></i> 6 Months</div><div class="course-meta-item"><i class="fas fa-certificate"></i> Certified</div></div><div class="course-card-footer"><a href="#computer-app" class="btn btn-outline btn-sm">View Details</a><a href="admission.html" class="btn btn-primary btn-sm">Apply Now</a></div></div></div>
+
+      <div class="course-card"><div class="course-card-thumb"><span class="course-num">03</span><span class="course-cat-badge">IT</span><span class="course-status-badge">Available</span><i class="fas fa-microchip course-icon"></i></div><div class="course-card-body"><h3 class="course-card-name">Advance Certificate in IT</h3><p class="course-card-desc">Advanced Information Technology program covering networking, hardware, software, and IT management fundamentals.</p><div class="course-card-meta"><div class="course-meta-item"><i class="fas fa-clock"></i> 12 Months</div><div class="course-meta-item"><i class="fas fa-certificate"></i> Certified</div></div><div class="course-card-footer"><a href="#acit" class="btn btn-outline btn-sm">View Details</a><a href="admission.html" class="btn btn-primary btn-sm">Apply Now</a></div></div></div>
+
+      <div class="course-card"><div class="course-card-thumb"><span class="course-num">04</span><span class="course-cat-badge">Typing</span><span class="course-status-badge">Available</span><i class="fas fa-keyboard course-icon"></i></div><div class="course-card-body"><h3 class="course-card-name">Typing English & Urdu</h3><p class="course-card-desc">Professional typing in both English and Urdu with speed and accuracy training for government and private jobs.</p><div class="course-card-meta"><div class="course-meta-item"><i class="fas fa-clock"></i> 3 Months</div><div class="course-meta-item"><i class="fas fa-certificate"></i> Certified</div></div><div class="course-card-footer"><a href="#typing" class="btn btn-outline btn-sm">View Details</a><a href="admission.html" class="btn btn-primary btn-sm">Apply Now</a></div></div></div>
+
+      <div class="course-card"><div class="course-card-thumb"><span class="course-num">05</span><span class="course-cat-badge">Professional</span><span class="course-status-badge">Available</span><i class="fas fa-pen course-icon"></i></div><div class="course-card-body"><h3 class="course-card-name">Shorthand</h3><p class="course-card-desc">Professional shorthand writing skills highly valued for stenography, secretarial, and administrative roles.</p><div class="course-card-meta"><div class="course-meta-item"><i class="fas fa-clock"></i> 6 Months</div><div class="course-meta-item"><i class="fas fa-certificate"></i> Certified</div></div><div class="course-card-footer"><a href="#shorthand" class="btn btn-outline btn-sm">View Details</a><a href="admission.html" class="btn btn-primary btn-sm">Apply Now</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Course Sections -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+
+    <!-- MS Office -->
+    <div class="course-detail-section" id="ms-office">
+      <div class="course-detail-grid reveal">
+        <div>
+          <span class="badge badge-accent" style="margin-bottom:16px;"><i class="fas fa-desktop"></i> Computer Course</span>
+          <h2 class="section-title" style="font-size:2rem;">MS Office</h2>
+          <p style="color:var(--gray-600);line-height:1.8;margin-bottom:20px;">The MS Office course is designed to give students complete mastery over Microsoft Office applications — the most used software suite in offices worldwide. From creating professional documents in Word to managing data in Excel and creating impactful presentations in PowerPoint.</p>
+          <h4 style="font-size:0.95rem;font-weight:700;color:var(--gray-800);margin-bottom:12px;">What You Will Learn:</h4>
+          <div class="learn-list">
+            <div class="learn-item"><i class="fas fa-check"></i> Microsoft Word — Documents & Formatting</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Microsoft Excel — Spreadsheets & Formulas</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Microsoft PowerPoint — Presentations</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Microsoft Access — Database Basics</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Microsoft Outlook — Email Management</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Practical Office Skills</div>
+          </div>
+          <div style="margin-top:24px;"><a href="admission.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Apply for This Course</a></div>
+        </div>
+        <div class="course-detail-sidebar">
+          <div class="sidebar-header">
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Course Info</div>
+            <div style="font-size:1.2rem;font-weight:700;">MS Office</div>
+          </div>
+          <div class="sidebar-body">
+            <div class="sidebar-info-list">
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-clock"></i> Duration</span><span class="sidebar-info-value">3 Months</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-tag"></i> Category</span><span class="sidebar-info-value">Computer</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-signal"></i> Level</span><span class="sidebar-info-value">Beginner</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-certificate"></i> Certificate</span><span class="sidebar-info-value">Yes — Nationally Certified</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-sun"></i> Shifts</span><span class="sidebar-info-value">Morning & Evening</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-check-circle"></i> Status</span><span class="sidebar-info-value" style="color:var(--success);">Available</span></div>
+            </div>
+            <a href="admission.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;"><i class="fas fa-paper-plane"></i> Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Computer Application -->
+    <div class="course-detail-section" id="computer-app">
+      <div class="course-detail-grid reveal">
+        <div>
+          <span class="badge badge-accent" style="margin-bottom:16px;"><i class="fas fa-laptop"></i> Computer Course</span>
+          <h2 class="section-title" style="font-size:2rem;">Computer Application</h2>
+          <p style="color:var(--gray-600);line-height:1.8;margin-bottom:20px;">The Computer Application course provides comprehensive training in practical computer skills needed in modern workplaces. Students learn everything from basic computer operation to advanced applications, internet usage, and practical office tasks.</p>
+          <h4 style="font-size:0.95rem;font-weight:700;color:var(--gray-800);margin-bottom:12px;">What You Will Learn:</h4>
+          <div class="learn-list">
+            <div class="learn-item"><i class="fas fa-check"></i> Computer Fundamentals & OS</div>
+            <div class="learn-item"><i class="fas fa-check"></i> MS Office Complete Suite</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Internet & Email Basics</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Data Entry & Management</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Basic Graphic Design</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Computer Maintenance Basics</div>
+          </div>
+          <div style="margin-top:24px;"><a href="admission.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Apply for This Course</a></div>
+        </div>
+        <div class="course-detail-sidebar">
+          <div class="sidebar-header"><div style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Course Info</div><div style="font-size:1.2rem;font-weight:700;">Computer Application</div></div>
+          <div class="sidebar-body">
+            <div class="sidebar-info-list">
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-clock"></i> Duration</span><span class="sidebar-info-value">6 Months</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-tag"></i> Category</span><span class="sidebar-info-value">Computer</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-signal"></i> Level</span><span class="sidebar-info-value">Beginner–Intermediate</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-certificate"></i> Certificate</span><span class="sidebar-info-value">Yes — Nationally Certified</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-sun"></i> Shifts</span><span class="sidebar-info-value">Morning & Evening</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-check-circle"></i> Status</span><span class="sidebar-info-value" style="color:var(--success);">Available</span></div>
+            </div>
+            <a href="admission.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;"><i class="fas fa-paper-plane"></i> Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACIT -->
+    <div class="course-detail-section" id="acit">
+      <div class="course-detail-grid reveal">
+        <div>
+          <span class="badge badge-accent" style="margin-bottom:16px;"><i class="fas fa-microchip"></i> IT Course</span>
+          <h2 class="section-title" style="font-size:2rem;">Advance Certificate in Information Technology</h2>
+          <p style="color:var(--gray-600);line-height:1.8;margin-bottom:20px;">ACIT is our most comprehensive IT program, providing advanced training in information technology including networking, hardware, software, and IT management. Perfect for those seeking careers in the IT sector or government positions.</p>
+          <h4 style="font-size:0.95rem;font-weight:700;color:var(--gray-800);margin-bottom:12px;">What You Will Learn:</h4>
+          <div class="learn-list">
+            <div class="learn-item"><i class="fas fa-check"></i> Computer Hardware & Software</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Networking Fundamentals</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Operating Systems (Windows/Linux)</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Database Management</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Web Basics (HTML/Internet)</div>
+            <div class="learn-item"><i class="fas fa-check"></i> IT Security Basics</div>
+            <div class="learn-item"><i class="fas fa-check"></i> MS Office Advanced</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Practical Project Work</div>
+          </div>
+          <div style="margin-top:24px;"><a href="admission.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Apply for This Course</a></div>
+        </div>
+        <div class="course-detail-sidebar">
+          <div class="sidebar-header"><div style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Course Info</div><div style="font-size:1.2rem;font-weight:700;">ACIT</div></div>
+          <div class="sidebar-body">
+            <div class="sidebar-info-list">
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-clock"></i> Duration</span><span class="sidebar-info-value">12 Months</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-tag"></i> Category</span><span class="sidebar-info-value">IT</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-signal"></i> Level</span><span class="sidebar-info-value">Intermediate–Advanced</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-certificate"></i> Certificate</span><span class="sidebar-info-value">Yes — Nationally Certified</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-sun"></i> Shifts</span><span class="sidebar-info-value">Morning & Evening</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-check-circle"></i> Status</span><span class="sidebar-info-value" style="color:var(--success);">Available</span></div>
+            </div>
+            <a href="admission.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;"><i class="fas fa-paper-plane"></i> Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typing -->
+    <div class="course-detail-section" id="typing">
+      <div class="course-detail-grid reveal">
+        <div>
+          <span class="badge badge-accent" style="margin-bottom:16px;"><i class="fas fa-keyboard"></i> Typing Course</span>
+          <h2 class="section-title" style="font-size:2rem;">Typing English & Urdu</h2>
+          <p style="color:var(--gray-600);line-height:1.8;margin-bottom:20px;">Professional typing skills are essential for government jobs across Pakistan. Our Typing course trains students in both English and Urdu typing with a focus on speed, accuracy, and professional standards required by government departments.</p>
+          <h4 style="font-size:0.95rem;font-weight:700;color:var(--gray-800);margin-bottom:12px;">What You Will Learn:</h4>
+          <div class="learn-list">
+            <div class="learn-item"><i class="fas fa-check"></i> English Typing — Speed & Accuracy</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Urdu Typing — Inpage & Unicode</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Touch Typing Technique</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Speed Building Exercises</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Government Typing Standards</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Typing Test Preparation</div>
+          </div>
+          <div style="margin-top:24px;"><a href="admission.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Apply for This Course</a></div>
+        </div>
+        <div class="course-detail-sidebar">
+          <div class="sidebar-header"><div style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Course Info</div><div style="font-size:1.2rem;font-weight:700;">Typing English & Urdu</div></div>
+          <div class="sidebar-body">
+            <div class="sidebar-info-list">
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-clock"></i> Duration</span><span class="sidebar-info-value">3 Months</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-tag"></i> Category</span><span class="sidebar-info-value">Typing</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-signal"></i> Level</span><span class="sidebar-info-value">Beginner</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-certificate"></i> Certificate</span><span class="sidebar-info-value">Yes — Nationally Certified</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-sun"></i> Shifts</span><span class="sidebar-info-value">Morning & Evening</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-check-circle"></i> Status</span><span class="sidebar-info-value" style="color:var(--success);">Available</span></div>
+            </div>
+            <a href="admission.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;"><i class="fas fa-paper-plane"></i> Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shorthand -->
+    <div class="course-detail-section" id="shorthand">
+      <div class="course-detail-grid reveal">
+        <div>
+          <span class="badge badge-accent" style="margin-bottom:16px;"><i class="fas fa-pen"></i> Professional Skill</span>
+          <h2 class="section-title" style="font-size:2rem;">Shorthand</h2>
+          <p style="color:var(--gray-600);line-height:1.8;margin-bottom:20px;">Shorthand is a highly valued skill for stenographers, secretaries, and administrative staff. Our course provides systematic training in Pitman shorthand enabling students to take dictation at professional speeds required by government and corporate positions.</p>
+          <h4 style="font-size:0.95rem;font-weight:700;color:var(--gray-800);margin-bottom:12px;">What You Will Learn:</h4>
+          <div class="learn-list">
+            <div class="learn-item"><i class="fas fa-check"></i> Pitman Shorthand Basics</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Outlines & Vowel Signs</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Speed Building — 80 WPM</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Dictation Practice</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Transcription Skills</div>
+            <div class="learn-item"><i class="fas fa-check"></i> Government Test Prep</div>
+          </div>
+          <div style="margin-top:24px;"><a href="admission.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Apply for This Course</a></div>
+        </div>
+        <div class="course-detail-sidebar">
+          <div class="sidebar-header"><div style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Course Info</div><div style="font-size:1.2rem;font-weight:700;">Shorthand</div></div>
+          <div class="sidebar-body">
+            <div class="sidebar-info-list">
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-clock"></i> Duration</span><span class="sidebar-info-value">6 Months</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-tag"></i> Category</span><span class="sidebar-info-value">Professional</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-signal"></i> Level</span><span class="sidebar-info-value">Beginner</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-certificate"></i> Certificate</span><span class="sidebar-info-value">Yes — Nationally Certified</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-sun"></i> Shifts</span><span class="sidebar-info-value">Morning & Evening</span></div>
+              <div class="sidebar-info-item"><span class="sidebar-info-label"><i class="fas fa-check-circle"></i> Status</span><span class="sidebar-info-value" style="color:var(--success);">Available</span></div>
+            </div>
+            <a href="admission.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px;"><i class="fas fa-paper-plane"></i> Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div>
+        <h2 class="cta-title">Ready to Enroll?</h2>
+        <p class="cta-subtitle">Choose your course and apply today. Limited seats available for the 2026 batch.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="admission.html" class="btn btn-accent btn-lg"><i class="fas fa-graduation-cap"></i> Apply Now</a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand-logo"><div class="footer-brand-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div><div class="footer-brand-title">The Brain College</div></div></div><p class="footer-brand-desc">Professional computer and vocational education since 2011.</p><div class="footer-social"><a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a></div></div>
+      <div><div class="footer-col-title">Quick Links</div><div class="footer-links"><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a><a href="about.html" class="footer-link"><i class="fas fa-chevron-right"></i> About</a><a href="courses.html" class="footer-link"><i class="fas fa-chevron-right"></i> Courses</a><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></div></div>
+      <div><div class="footer-col-title">Courses</div><div class="footer-links"><a href="#ms-office" class="footer-link"><i class="fas fa-chevron-right"></i> MS Office</a><a href="#computer-app" class="footer-link"><i class="fas fa-chevron-right"></i> Computer Application</a><a href="#acit" class="footer-link"><i class="fas fa-chevron-right"></i> ACIT</a><a href="#typing" class="footer-link"><i class="fas fa-chevron-right"></i> Typing</a><a href="#shorthand" class="footer-link"><i class="fas fa-chevron-right"></i> Shorthand</a></div></div>
+      <div><div class="footer-col-title">Contact</div><div class="footer-contact-items"><div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><div class="footer-contact-text">Darya Khan Road, Bhakkar</div></div><div class="footer-contact-item"><i class="fas fa-phone"></i><div class="footer-contact-text">0333-8044574 | 0345-3994574</div></div></div></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-text">© 2026 The Brain College Bhakkar. All Rights Reserved.</div><div class="footer-bottom-links"><a href="admin/index.html" class="footer-bottom-link">Admin Panel</a></div></div>
+  </div>
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

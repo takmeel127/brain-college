@@ -1,0 +1,356 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="60%" stop-color="#0f2444"/>
+      <stop offset="100%" stop-color="#1a3c6e"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0f2444"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1b2e"/>
+      <stop offset="100%" stop-color="#1a3c6e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8a020"/>
+      <stop offset="100%" stop-color="#f5bc50"/>
+    </linearGradient>
+    <linearGradient id="person" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4956a"/>
+      <stop offset="100%" stop-color="#c07845"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3c6e"/>
+      <stop offset="100%" stop-color="#2554a0"/>
+    </linearGradient>
+    <linearGradient id="girlperson" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4956a"/>
+      <stop offset="100%" stop-color="#b87040"/>
+    </linearGradient>
+    <linearGradient id="girlshirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2554a0"/>
+      <stop offset="100%" stop-color="#1e4d8c"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#050d1a" flood-opacity="0.5"/>
+    </filter>
+    <filter id="cardshadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#050d1a" flood-opacity="0.3"/>
+    </filter>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2554a0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0f2444" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="floorGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a3c6e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="540" fill="url(#bg)"/>
+
+  <!-- Background grid lines -->
+  <g opacity="0.04" stroke="white" stroke-width="0.8">
+    <line x1="0" y1="90" x2="720" y2="90"/>
+    <line x1="0" y1="180" x2="720" y2="180"/>
+    <line x1="0" y1="270" x2="720" y2="270"/>
+    <line x1="0" y1="360" x2="720" y2="360"/>
+    <line x1="0" y1="450" x2="720" y2="450"/>
+    <line x1="90" y1="0" x2="90" y2="540"/>
+    <line x1="180" y1="0" x2="180" y2="540"/>
+    <line x1="270" y1="0" x2="270" y2="540"/>
+    <line x1="360" y1="0" x2="360" y2="540"/>
+    <line x1="450" y1="0" x2="450" y2="540"/>
+    <line x1="540" y1="0" x2="540" y2="540"/>
+    <line x1="630" y1="0" x2="630" y2="540"/>
+  </g>
+
+  <!-- Background orb glow -->
+  <ellipse cx="360" cy="300" rx="280" ry="200" fill="url(#screenGlow)" opacity="0.4"/>
+  <ellipse cx="360" cy="480" rx="320" ry="80" fill="url(#floorGlow)"/>
+
+  <!-- ── DESK SCENE ── -->
+
+  <!-- Desk surface -->
+  <rect x="80" y="370" width="560" height="18" rx="4" fill="url(#desk)" filter="url(#shadow)"/>
+  <rect x="60" y="386" width="600" height="8" rx="4" fill="#0a1628"/>
+
+  <!-- Desk legs -->
+  <rect x="120" y="394" width="16" height="100" rx="4" fill="#0f2444"/>
+  <rect x="584" y="394" width="16" height="100" rx="4" fill="#0f2444"/>
+
+  <!-- ── MAIN MONITOR (center) ── -->
+  <g filter="url(#shadow)">
+    <!-- Monitor outer -->
+    <rect x="240" y="160" width="240" height="190" rx="14" fill="#0d1b2e"/>
+    <!-- Screen bezel -->
+    <rect x="248" y="168" width="224" height="174" rx="10" fill="#050d1a"/>
+    <!-- Screen display -->
+    <rect x="256" y="176" width="208" height="158" rx="6" fill="url(#screen)"/>
+
+    <!-- Screen glow effect -->
+    <rect x="256" y="176" width="208" height="158" rx="6" fill="url(#screenGlow)" opacity="0.5"/>
+
+    <!-- Screen content — Code editor look -->
+    <!-- Title bar -->
+    <rect x="256" y="176" width="208" height="22" rx="6" fill="rgba(255,255,255,0.05)"/>
+    <circle cx="270" cy="187" r="4" fill="#ef4444" opacity="0.8"/>
+    <circle cx="284" cy="187" r="4" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="298" cy="187" r="4" fill="#10b981" opacity="0.8"/>
+    <rect x="310" y="183" width="80" height="8" rx="4" fill="rgba(255,255,255,0.08)"/>
+
+    <!-- Code lines with syntax highlighting -->
+    <rect x="268" y="208" width="55" height="5" rx="2" fill="#e8a020"/>
+    <rect x="268" y="218" width="140" height="4" rx="2" fill="rgba(255,255,255,0.22)"/>
+    <rect x="278" y="228" width="90" height="4" rx="2" fill="#7c3aed" opacity="0.8"/>
+    <rect x="278" y="238" width="120" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="278" y="248" width="60" height="4" rx="2" fill="#10b981" opacity="0.8"/>
+    <rect x="278" y="258" width="100" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="268" y="268" width="45" height="4" rx="2" fill="#e8a020" opacity="0.7"/>
+    <rect x="268" y="278" width="130" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+    <rect x="278" y="288" width="80" height="4" rx="2" fill="#2554a0" opacity="0.9"/>
+    <rect x="278" y="298" width="110" height="4" rx="2" fill="rgba(255,255,255,0.18)"/>
+    <rect x="268" y="308" width="150" height="4" rx="2" fill="#10b981" opacity="0.5"/>
+    <!-- Cursor blink -->
+    <rect x="268" y="318" width="3" height="12" rx="1" fill="#f5bc50"/>
+
+    <!-- Monitor stand -->
+    <rect x="345" y="350" width="30" height="22" rx="3" fill="#0d1b2e"/>
+    <rect x="330" y="370" width="60" height="10" rx="5" fill="#0a1628"/>
+
+    <!-- Camera dot -->
+    <circle cx="360" cy="172" r="3" fill="#1a3c6e"/>
+    <circle cx="360" cy="172" r="1.5" fill="#2554a0"/>
+  </g>
+
+  <!-- ── LEFT MONITOR ── -->
+  <g filter="url(#shadow)" opacity="0.85">
+    <rect x="60" y="210" width="170" height="140" rx="10" fill="#0d1b2e"/>
+    <rect x="68" y="218" width="154" height="124" rx="7" fill="url(#screen)"/>
+    <!-- Chart on left monitor -->
+    <rect x="78" y="260" width="14" height="52" rx="3" fill="#e8a020" opacity="0.8"/>
+    <rect x="98" y="248" width="14" height="64" rx="3" fill="#2554a0" opacity="0.9"/>
+    <rect x="118" y="272" width="14" height="40" rx="3" fill="#e8a020" opacity="0.6"/>
+    <rect x="138" y="255" width="14" height="57" rx="3" fill="#2554a0" opacity="0.7"/>
+    <rect x="158" y="240" width="14" height="72" rx="3" fill="#10b981" opacity="0.8"/>
+    <rect x="178" y="265" width="14" height="47" rx="3" fill="#e8a020" opacity="0.9"/>
+    <!-- Axis lines -->
+    <line x1="78" y1="314" x2="200" y2="314" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <line x1="78" y1="228" x2="78" y2="314" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <!-- Title -->
+    <rect x="78" y="228" width="70" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <!-- Stand -->
+    <rect x="137" y="350" width="20" height="18" rx="3" fill="#0d1b2e"/>
+    <rect x="125" y="366" width="44" height="8" rx="4" fill="#0a1628"/>
+  </g>
+
+  <!-- ── RIGHT MONITOR ── -->
+  <g filter="url(#shadow)" opacity="0.85">
+    <rect x="490" y="210" width="170" height="140" rx="10" fill="#0d1b2e"/>
+    <rect x="498" y="218" width="154" height="124" rx="7" fill="url(#screen)"/>
+    <!-- Spreadsheet on right monitor -->
+    <!-- Header row -->
+    <rect x="500" y="220" width="150" height="12" rx="2" fill="rgba(37,84,160,0.4)"/>
+    <!-- Table rows -->
+    <g opacity="0.6">
+      <rect x="500" y="234" width="150" height="1" fill="rgba(255,255,255,0.1)"/>
+      <rect x="500" y="246" width="150" height="1" fill="rgba(255,255,255,0.1)"/>
+      <rect x="500" y="258" width="150" height="1" fill="rgba(255,255,255,0.1)"/>
+      <rect x="500" y="270" width="150" height="1" fill="rgba(255,255,255,0.1)"/>
+      <rect x="500" y="282" width="150" height="1" fill="rgba(255,255,255,0.1)"/>
+      <rect x="500" y="294" width="150" height="1" fill="rgba(255,255,255,0.1)"/>
+      <rect x="530" y="220" width="1" height="90" fill="rgba(255,255,255,0.1)"/>
+      <rect x="570" y="220" width="1" height="90" fill="rgba(255,255,255,0.1)"/>
+      <rect x="615" y="220" width="1" height="90" fill="rgba(255,255,255,0.1)"/>
+    </g>
+    <!-- Cell data bars -->
+    <rect x="504" y="236" width="40" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
+    <rect x="504" y="248" width="60" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="504" y="260" width="30" height="6" rx="2" fill="rgba(255,255,255,0.20)"/>
+    <rect x="504" y="272" width="50" height="6" rx="2" fill="rgba(255,255,255,0.12)"/>
+    <rect x="535" y="236" width="25" height="6" rx="2" fill="#e8a020" opacity="0.5"/>
+    <rect x="535" y="248" width="35" height="6" rx="2" fill="#e8a020" opacity="0.4"/>
+    <rect x="535" y="260" width="20" height="6" rx="2" fill="#10b981" opacity="0.6"/>
+    <rect x="535" y="272" width="30" height="6" rx="2" fill="#e8a020" opacity="0.35"/>
+    <!-- Mini pie chart area -->
+    <circle cx="570" cy="296" r="16" fill="none" stroke="#e8a020" stroke-width="4" stroke-dasharray="35 65" stroke-dashoffset="25" opacity="0.8"/>
+    <circle cx="570" cy="296" r="16" fill="none" stroke="#2554a0" stroke-width="4" stroke-dasharray="25 75" stroke-dashoffset="-40" opacity="0.8"/>
+    <circle cx="570" cy="296" r="16" fill="none" stroke="#10b981" stroke-width="4" stroke-dasharray="15 85" stroke-dashoffset="-65" opacity="0.8"/>
+    <!-- Stand -->
+    <rect x="567" y="350" width="20" height="18" rx="3" fill="#0d1b2e"/>
+    <rect x="555" y="366" width="44" height="8" rx="4" fill="#0a1628"/>
+  </g>
+
+  <!-- ── STUDENT 1: BOY (left, seated) ── -->
+  <g filter="url(#shadow)">
+    <!-- Chair back -->
+    <rect x="128" y="280" width="50" height="90" rx="8" fill="#0f2444"/>
+    <!-- Body / shirt -->
+    <rect x="120" y="300" width="66" height="72" rx="10" fill="url(#shirt)"/>
+    <!-- Neck -->
+    <rect x="146" y="288" width="18" height="16" rx="6" fill="url(#person)"/>
+    <!-- Head -->
+    <ellipse cx="155" cy="276" rx="24" ry="26" fill="url(#person)"/>
+    <!-- Hair -->
+    <path d="M131 264 Q135 248 155 246 Q175 248 179 264 Q179 254 155 250 Q131 254 131 264Z" fill="#2d1a0a"/>
+    <!-- Eyes -->
+    <ellipse cx="148" cy="272" rx="3.5" ry="4" fill="#1a1a1a"/>
+    <ellipse cx="162" cy="272" rx="3.5" ry="4" fill="#1a1a1a"/>
+    <circle cx="149.5" cy="271" r="1.2" fill="white"/>
+    <circle cx="163.5" cy="271" r="1.2" fill="white"/>
+    <!-- Eyebrows -->
+    <path d="M144 266 Q148 263 152 266" stroke="#2d1a0a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M158 266 Q162 263 166 266" stroke="#2d1a0a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M153 276 Q155 280 157 276" stroke="rgba(0,0,0,0.25)" stroke-width="1.2" fill="none"/>
+    <!-- Smile -->
+    <path d="M148 284 Q155 289 162 284" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Arms -->
+    <rect x="108" y="318" width="16" height="40" rx="6" fill="url(#shirt)"/>
+    <rect x="196" y="318" width="16" height="40" rx="6" fill="url(#shirt)"/>
+    <!-- Hands on keyboard -->
+    <ellipse cx="116" cy="362" rx="10" ry="7" fill="url(#person)"/>
+    <ellipse cx="204" cy="362" rx="10" ry="7" fill="url(#person)"/>
+    <!-- Keyboard under hands -->
+    <rect x="90" y="366" width="130" height="10" rx="4" fill="#1a2a44"/>
+  </g>
+
+  <!-- ── STUDENT 2: GIRL (right, seated) ── -->
+  <g filter="url(#shadow)">
+    <!-- Chair back -->
+    <rect x="542" y="280" width="50" height="90" rx="8" fill="#0f2444"/>
+    <!-- Hijab / scarf base -->
+    <ellipse cx="567" cy="272" rx="30" ry="32" fill="#1a3c6e"/>
+    <!-- Body / uniform -->
+    <rect x="534" y="300" width="66" height="72" rx="10" fill="url(#girlshirt)"/>
+    <!-- Neck -->
+    <rect x="558" y="290" width="18" height="16" rx="6" fill="url(#girlperson)"/>
+    <!-- Face -->
+    <ellipse cx="567" cy="278" rx="20" ry="22" fill="url(#girlperson)"/>
+    <!-- Hijab detail -->
+    <path d="M537 272 Q540 252 567 248 Q594 252 597 272 Q590 260 567 256 Q544 260 537 272Z" fill="#0f2444"/>
+    <path d="M537 272 Q536 284 540 296 Q553 302 567 302 Q581 302 594 296 Q598 284 597 272" fill="#1a3c6e"/>
+    <!-- Eyes -->
+    <ellipse cx="560" cy="275" rx="3.5" ry="4" fill="#1a1a1a"/>
+    <ellipse cx="574" cy="275" rx="3.5" ry="4" fill="#1a1a1a"/>
+    <circle cx="561.5" cy="274" r="1.2" fill="white"/>
+    <circle cx="575.5" cy="274" r="1.2" fill="white"/>
+    <!-- Eyebrows -->
+    <path d="M556 268 Q560 265 564 268" stroke="#1a0a00" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M570 268 Q574 265 578 268" stroke="#1a0a00" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M565 280 Q567 284 569 280" stroke="rgba(0,0,0,0.22)" stroke-width="1.2" fill="none"/>
+    <!-- Smile -->
+    <path d="M561 287 Q567 292 573 287" stroke="rgba(0,0,0,0.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Arms -->
+    <rect x="522" y="318" width="16" height="40" rx="6" fill="url(#girlshirt)"/>
+    <rect x="582" y="318" width="16" height="40" rx="6" fill="url(#girlshirt)"/>
+    <!-- Hands -->
+    <ellipse cx="530" cy="362" rx="10" ry="7" fill="url(#girlperson)"/>
+    <ellipse cx="590" cy="362" rx="10" ry="7" fill="url(#girlperson)"/>
+    <!-- Keyboard -->
+    <rect x="514" y="366" width="106" height="10" rx="4" fill="#1a2a44"/>
+  </g>
+
+  <!-- ── TEACHER / INSTRUCTOR (standing right) ── -->
+  <g filter="url(#shadow)">
+    <!-- Body -->
+    <rect x="620" y="270" width="55" height="130" rx="10" fill="#c07010"/>
+    <!-- Shirt under coat -->
+    <rect x="628" y="270" width="39" height="80" rx="8" fill="white" opacity="0.9"/>
+    <!-- Jacket/coat panels -->
+    <path d="M620 270 L630 270 L647 320 L620 330Z" fill="#0f2444"/>
+    <path d="M675 270 L665 270 L648 320 L675 330Z" fill="#0f2444"/>
+    <!-- Tie -->
+    <rect x="643" y="272" width="9" height="48" rx="4" fill="#e8a020"/>
+    <!-- Neck -->
+    <rect x="640" y="258" width="15" height="16" rx="6" fill="#d4956a"/>
+    <!-- Head -->
+    <ellipse cx="647" cy="245" rx="22" ry="24" fill="#d4956a"/>
+    <!-- Hair (teacher older) -->
+    <path d="M625 238 Q628 222 647 220 Q666 222 669 238 Q666 226 647 224 Q628 226 625 238Z" fill="#2d1a0a" opacity="0.6"/>
+    <!-- Glasses -->
+    <rect x="635" y="239" width="10" height="8" rx="3" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+    <rect x="648" y="239" width="10" height="8" rx="3" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+    <line x1="645" y1="243" x2="648" y2="243" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Eyes behind glasses -->
+    <ellipse cx="640" cy="243" rx="2.5" ry="2.5" fill="#1a1a1a"/>
+    <ellipse cx="653" cy="243" rx="2.5" ry="2.5" fill="#1a1a1a"/>
+    <!-- Smile professional -->
+    <path d="M641 253 Q647 257 653 253" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Arms -->
+    <rect x="600" y="278" width="20" height="55" rx="8" fill="#c07010"/>
+    <rect x="675" y="278" width="20" height="55" rx="8" fill="#c07010"/>
+    <!-- Hand holding pointer -->
+    <ellipse cx="610" cy="336" rx="9" ry="6" fill="#d4956a"/>
+    <rect x="604" y="332" width="2" height="50" rx="1" fill="#e8a020"/>
+  </g>
+
+  <!-- ── WHITEBOARD ── -->
+  <g filter="url(#cardshadow)">
+    <rect x="30" y="40" width="200" height="130" rx="10" fill="white" opacity="0.95"/>
+    <rect x="36" y="46" width="188" height="118" rx="7" fill="#f8f9fc"/>
+    <!-- Board title -->
+    <rect x="44" y="54" width="100" height="8" rx="4" fill="#1a3c6e"/>
+    <!-- Board content -->
+    <rect x="44" y="70" width="172" height="4" rx="2" fill="#9ca3af"/>
+    <rect x="44" y="80" width="140" height="4" rx="2" fill="#9ca3af"/>
+    <rect x="44" y="90" width="160" height="4" rx="2" fill="#9ca3af"/>
+    <!-- Diagram on board -->
+    <circle cx="80" cy="118" r="16" fill="none" stroke="#1a3c6e" stroke-width="2"/>
+    <circle cx="80" cy="118" r="16" fill="rgba(26,60,110,0.08)"/>
+    <path d="M80 102 L80 134 M64 118 L96 118" stroke="#1a3c6e" stroke-width="1.5"/>
+    <rect x="110" y="108" width="48" height="20" rx="4" fill="none" stroke="#e8a020" stroke-width="1.5"/>
+    <rect x="110" y="108" width="48" height="20" rx="4" fill="rgba(232,160,32,0.08)"/>
+    <line x1="158" y1="118" x2="176" y2="118" stroke="#1a3c6e" stroke-width="1.5"/>
+    <rect x="176" y="108" width="36" height="20" rx="4" fill="none" stroke="#10b981" stroke-width="1.5"/>
+    <text x="189" y="122" text-anchor="middle" font-size="9" fill="#10b981" font-weight="700">OK</text>
+    <!-- Marker holder -->
+    <rect x="38" y="155" width="180" height="5" rx="2.5" fill="#e5e7eb"/>
+    <rect x="44" y="154" width="8" height="7" rx="2" fill="#ef4444"/>
+    <rect x="56" y="154" width="8" height="7" rx="2" fill="#1a3c6e"/>
+    <rect x="68" y="154" width="8" height="7" rx="2" fill="#10b981"/>
+  </g>
+
+  <!-- ── FLOATING ACHIEVEMENT CARDS ── -->
+  <!-- Card 1: Est. 2011 -->
+  <g filter="url(#cardshadow)" transform="translate(30, 200)">
+    <rect width="120" height="68" rx="14" fill="white" opacity="0.97"/>
+    <rect x="0" y="0" width="120" height="5" rx="14" fill="#e8a020"/>
+    <text x="14" y="24" font-size="10" fill="#6b7280" font-family="Inter,sans-serif" font-weight="500">Est. Since</text>
+    <text x="14" y="48" font-size="24" fill="#1a3c6e" font-family="Inter,sans-serif" font-weight="900">2011</text>
+  </g>
+
+  <!-- Card 2: 5000+ Students -->
+  <g filter="url(#cardshadow)" transform="translate(550, 40)">
+    <rect width="140" height="72" rx="14" fill="white" opacity="0.97"/>
+    <rect x="0" y="0" width="140" height="5" rx="14" fill="#1a3c6e"/>
+    <text x="14" y="26" font-size="10" fill="#6b7280" font-family="Inter,sans-serif" font-weight="500">Students Trained</text>
+    <text x="14" y="54" font-size="24" fill="#e8a020" font-family="Inter,sans-serif" font-weight="900">5000+</text>
+  </g>
+
+  <!-- Card 3: Certified -->
+  <g filter="url(#cardshadow)" transform="translate(280, 30)">
+    <rect width="130" height="60" rx="14" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="1.5" opacity="0.97"/>
+    <circle cx="26" cy="30" r="14" fill="rgba(16,185,129,0.2)"/>
+    <text x="26" y="35" text-anchor="middle" font-size="14">✓</text>
+    <text x="46" y="24" font-size="10" fill="#10b981" font-family="Inter,sans-serif" font-weight="700">CERTIFIED</text>
+    <text x="46" y="38" font-size="9" fill="#6b7280" font-family="Inter,sans-serif">Nationally Recognized</text>
+    <text x="46" y="50" font-size="9" fill="#6b7280" font-family="Inter,sans-serif">Programs</text>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="440" cy="80" r="40" fill="none" stroke="rgba(232,160,32,0.12)" stroke-width="2" stroke-dasharray="6 4"/>
+  <circle cx="50" cy="460" r="30" fill="rgba(37,84,160,0.08)"/>
+  <circle cx="690" cy="460" r="25" fill="rgba(232,160,32,0.07)"/>
+  <circle cx="680" cy="160" r="6" fill="#e8a020" opacity="0.5"/>
+  <circle cx="30" cy="360" r="4" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="420" cy="500" r="5" fill="rgba(37,84,160,0.4)"/>
+</svg>

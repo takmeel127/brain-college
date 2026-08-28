@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f2444"/><stop offset="100%" stop-color="#1a3c6e"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d1b2e"/><stop offset="100%" stop-color="#1e3a5f"/></linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4956a"/><stop offset="100%" stop-color="#c07845"/></linearGradient>
+    <linearGradient id="uniform" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a3c6e"/><stop offset="100%" stop-color="#2554a0"/></linearGradient>
+    <filter id="sh" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#050d1a" flood-opacity="0.4"/></filter>
+  </defs>
+
+  <!-- Room background -->
+  <rect width="400" height="320" fill="url(#bg)"/>
+  <!-- Floor -->
+  <rect x="0" y="250" width="400" height="70" fill="#0a1628"/>
+  <!-- Wall line -->
+  <rect x="0" y="248" width="400" height="3" fill="#1a3c6e" opacity="0.5"/>
+  <!-- Grid bg -->
+  <g opacity="0.04" stroke="white" stroke-width="0.5">
+    <line x1="0" y1="80" x2="400" y2="80"/><line x1="0" y1="160" x2="400" y2="160"/><line x1="0" y1="240" x2="400" y2="240"/>
+    <line x1="80" y1="0" x2="80" y2="320"/><line x1="160" y1="0" x2="160" y2="320"/><line x1="240" y1="0" x2="240" y2="320"/><line x1="320" y1="0" x2="320" y2="320"/>
+  </g>
+
+  <!-- Desk -->
+  <rect x="60" y="218" width="280" height="14" rx="4" fill="#1e3a5f" filter="url(#sh)"/>
+  <rect x="44" y="230" width="312" height="6" rx="3" fill="#0f2444"/>
+  <!-- Desk legs -->
+  <rect x="80" y="236" width="10" height="70" rx="3" fill="#0f2444"/>
+  <rect x="310" y="236" width="10" height="70" rx="3" fill="#0f2444"/>
+
+  <!-- Monitor -->
+  <g filter="url(#sh)">
+    <rect x="140" y="100" width="190" height="130" rx="12" fill="#0d1b2e"/>
+    <rect x="149" y="109" width="172" height="112" rx="8" fill="url(#screen)"/>
+    <!-- Screen glow -->
+    <rect x="149" y="109" width="172" height="112" rx="8" fill="rgba(37,84,160,0.2)"/>
+    <!-- Title bar -->
+    <rect x="149" y="109" width="172" height="18" rx="8" fill="rgba(255,255,255,0.05)"/>
+    <circle cx="161" cy="118" r="3" fill="#ef4444" opacity="0.8"/>
+    <circle cx="173" cy="118" r="3" fill="#f59e0b" opacity="0.8"/>
+    <circle cx="185" cy="118" r="3" fill="#10b981" opacity="0.8"/>
+    <!-- MS Word document look -->
+    <rect x="159" y="134" width="140" height="8" rx="2" fill="rgba(255,255,255,0.25)"/>
+    <rect x="159" y="148" width="120" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="159" y="159" width="135" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="159" y="170" width="100" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="159" y="181" width="130" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="159" y="192" width="80" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="159" y="203" width="115" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <!-- Cursor -->
+    <rect x="279" y="203" width="2" height="10" rx="1" fill="#f5bc50"/>
+    <!-- Monitor stand -->
+    <rect x="223" y="230" width="24" height="16" rx="3" fill="#0d1b2e"/>
+    <rect x="211" y="244" width="48" height="7" rx="3" fill="#0a1628"/>
+  </g>
+
+  <!-- Keyboard -->
+  <rect x="128" y="216" width="150" height="8" rx="4" fill="#1a2a44"/>
+  <g opacity="0.5">
+    <rect x="132" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="144" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="156" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="168" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="180" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="192" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="204" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="216" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="228" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="240" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="252" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+    <rect x="264" y="217" width="8" height="5" rx="1" fill="rgba(255,255,255,0.15)"/>
+  </g>
+  <!-- Mouse -->
+  <rect x="285" y="214" width="20" height="14" rx="7" fill="#1a2a44"/>
+  <line x1="295" y1="214" x2="295" y2="228" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- ── GIRL STUDENT ── -->
+  <g filter="url(#sh)">
+    <!-- Chair -->
+    <rect x="90" y="170" width="44" height="80" rx="8" fill="#0f2444"/>
+    <rect x="86" y="230" width="52" height="8" rx="4" fill="#0d1b2e"/>
+    <!-- Seat -->
+    <ellipse cx="112" cy="238" rx="26" ry="8" fill="#0f2444"/>
+    <!-- Body/uniform -->
+    <rect x="80" y="178" width="64" height="62" rx="10" fill="url(#uniform)"/>
+    <!-- Scarf/hijab outer -->
+    <ellipse cx="112" cy="160" rx="32" ry="34" fill="#0f2444"/>
+    <!-- Face -->
+    <ellipse cx="112" cy="165" rx="22" ry="24" fill="url(#skin)"/>
+    <!-- Hijab fabric drape -->
+    <path d="M80 163 Q82 180 88 196 Q100 204 112 205 Q124 204 136 196 Q142 180 144 163" fill="#1a3c6e"/>
+    <!-- Inner hijab -->
+    <ellipse cx="112" cy="158" rx="22" ry="24" fill="url(#skin)"/>
+    <!-- Hijab cap -->
+    <path d="M90 153 Q94 136 112 133 Q130 136 134 153 Q132 140 112 138 Q92 140 90 153Z" fill="#0f2444"/>
+    <!-- Eyes -->
+    <ellipse cx="105" cy="161" rx="3.5" ry="4.2" fill="#1a1a1a"/>
+    <ellipse cx="119" cy="161" rx="3.5" ry="4.2" fill="#1a1a1a"/>
+    <circle cx="106.5" cy="159.5" r="1.3" fill="white"/>
+    <circle cx="120.5" cy="159.5" r="1.3" fill="white"/>
+    <!-- Eyebrows arched -->
+    <path d="M101 154 Q105 151 109 154" stroke="#2d1a0a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M115 154 Q119 151 123 154" stroke="#2d1a0a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M110 167 Q112 171 114 167" stroke="rgba(0,0,0,0.2)" stroke-width="1.3" fill="none"/>
+    <!-- Bright smile -->
+    <path d="M106 174 Q112 180 118 174" stroke="rgba(0,0,0,0.25)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Arms reaching to keyboard -->
+    <rect x="70" y="196" width="18" height="38" rx="7" fill="url(#uniform)"/>
+    <rect x="136" y="196" width="18" height="38" rx="7" fill="url(#uniform)"/>
+    <!-- Hands on keyboard area -->
+    <ellipse cx="79" cy="238" rx="11" ry="7" fill="url(#skin)"/>
+    <ellipse cx="145" cy="238" rx="11" ry="7" fill="url(#skin)"/>
+  </g>
+
+  <!-- ── Floating label card ── -->
+  <g filter="url(#sh)" transform="translate(16, 24)">
+    <rect width="130" height="60" rx="12" fill="white" opacity="0.96"/>
+    <rect x="12" y="12" width="24" height="24" rx="7" fill="rgba(37,84,160,0.12)"/>
+    <text x="24" y="28" text-anchor="middle" font-size="14">💻</text>
+    <text x="44" y="22" font-size="9" fill="#6b7280" font-family="Inter,sans-serif">Computer Lab</text>
+    <text x="44" y="34" font-size="11" fill="#1a3c6e" font-family="Inter,sans-serif" font-weight="700">Female Section</text>
+    <text x="44" y="46" font-size="9" fill="#10b981" font-family="Inter,sans-serif">● Active Session</text>
+  </g>
+
+  <!-- Decorative glow under monitor -->
+  <ellipse cx="235" cy="118" rx="80" ry="20" fill="rgba(37,84,160,0.15)" filter="url(#sh)"/>
+</svg>

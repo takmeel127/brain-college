@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320" fill="none">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a2a4a"/><stop offset="100%" stop-color="#0f2444"/></linearGradient>
+    <linearGradient id="skin5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8B6050"/><stop offset="100%" stop-color="#7a4f3e"/></linearGradient>
+    <linearGradient id="suit5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c07010"/><stop offset="100%" stop-color="#e8a020"/></linearGradient>
+    <radialGradient id="glow5" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#e8a020" stop-opacity="0.2"/><stop offset="100%" stop-color="#0f2444" stop-opacity="0"/></radialGradient>
+  </defs>
+
+  <rect width="280" height="320" fill="url(#bg5)"/>
+  <ellipse cx="140" cy="110" rx="130" ry="130" fill="url(#glow5)"/>
+  <g opacity="0.04" stroke="white" stroke-width="0.5">
+    <line x1="0" y1="80" x2="280" y2="80"/><line x1="0" y1="160" x2="280" y2="160"/><line x1="0" y1="240" x2="280" y2="240"/>
+    <line x1="70" y1="0" x2="70" y2="320"/><line x1="140" y1="0" x2="140" y2="320"/><line x1="210" y1="0" x2="210" y2="320"/>
+  </g>
+
+  <!-- Body - shalwar kameez style -->
+  <rect x="60" y="202" width="160" height="142" rx="16" fill="#1a3c6e"/>
+  <!-- Kameez collar V-neck -->
+  <path d="M116 202 L140 240 L164 202Z" fill="#0f2444"/>
+  <!-- Embroidery/trim detail -->
+  <path d="M60 202 L60 220 Q80 218 100 222 Q120 224 140 222 Q160 224 180 222 Q200 218 220 220 L220 202Z" fill="rgba(232,160,32,0.15)"/>
+
+  <!-- Neck -->
+  <rect x="124" y="182" width="32" height="26" rx="10" fill="url(#skin5)"/>
+
+  <!-- Head (older, experienced look) -->
+  <ellipse cx="140" cy="152" rx="54" ry="60" fill="url(#skin5)"/>
+
+  <!-- Ears -->
+  <ellipse cx="86" cy="158" rx="8" ry="12" fill="url(#skin5)"/>
+  <ellipse cx="194" cy="158" rx="8" ry="12" fill="url(#skin5)"/>
+  <ellipse cx="86" cy="158" rx="4.5" ry="7" fill="#7a4f3e" opacity="0.5"/>
+  <ellipse cx="194" cy="158" rx="4.5" ry="7" fill="#7a4f3e" opacity="0.5"/>
+
+  <!-- Grey/salt-pepper hair (experienced teacher) -->
+  <path d="M86 130 Q90 100 140 96 Q190 100 194 130 Q190 104 140 100 Q90 104 86 130Z" fill="#5a5a5a"/>
+  <!-- Grey temples -->
+  <rect x="86" y="130" width="8" height="20" rx="4" fill="#7a7a7a"/>
+  <rect x="186" y="130" width="8" height="20" rx="4" fill="#7a7a7a"/>
+
+  <!-- Eyes mature/wise -->
+  <ellipse cx="122" cy="152" rx="6" ry="6" fill="#1a1a1a"/>
+  <ellipse cx="158" cy="152" rx="6" ry="6" fill="#1a1a1a"/>
+  <ellipse cx="122" cy="152" rx="4" ry="4" fill="#3d2b10"/>
+  <ellipse cx="158" cy="152" rx="4" ry="4" fill="#3d2b10"/>
+  <circle cx="124" cy="150" r="1.8" fill="white"/>
+  <circle cx="160" cy="150" r="1.8" fill="white"/>
+  <!-- Crow's feet -->
+  <path d="M128 148 Q132 144 136 148" stroke="#7a4f3e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M144 148 Q148 144 152 148" stroke="#7a4f3e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Eyebrows greying -->
+  <path d="M112 136 Q122 131 132 136" stroke="#5a5a5a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M148 136 Q158 131 168 136" stroke="#5a5a5a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M136 162 Q140 170 144 162" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" fill="none"/>
+  <!-- Warm experienced smile with lines -->
+  <path d="M127 178 Q140 188 153 178" stroke="rgba(0,0,0,0.3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Beard grey -->
+  <path d="M114 188 Q118 196 130 202 Q140 206 150 202 Q162 196 166 188" fill="rgba(100,100,100,0.35)"/>
+  <path d="M120 184 Q130 190 140 192 Q150 190 160 184" stroke="#7a7a7a" stroke-width="1.5" fill="none"/>
+  <!-- Moustache -->
+  <path d="M128 174 Q134 170 140 174 Q146 170 152 174" stroke="#5a5a5a" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Arms -->
+  <rect x="46" y="212" width="28" height="64" rx="10" fill="#1a3c6e"/>
+  <rect x="206" y="212" width="28" height="64" rx="10" fill="#1a3c6e"/>
+  <ellipse cx="60" cy="280" rx="15" ry="11" fill="url(#skin5)"/>
+  <ellipse cx="220" cy="280" rx="15" ry="11" fill="url(#skin5)"/>
+  <!-- Certificate/award in right hand -->
+  <rect x="208" y="256" width="44" height="36" rx="6" fill="#f5bc50"/>
+  <rect x="212" y="260" width="36" height="28" rx="4" fill="white"/>
+  <rect x="216" y="264" width="28" height="3" rx="1.5" fill="#1a3c6e" opacity="0.5"/>
+  <rect x="220" y="269" width="20" height="2.5" rx="1.2" fill="#9ca3af"/>
+  <rect x="218" y="274" width="24" height="2.5" rx="1.2" fill="#9ca3af"/>
+  <circle cx="230" cy="282" r="5" fill="none" stroke="#e8a020" stroke-width="1.5"/>
+  <path d="M227 282 L229 284 L233 279" stroke="#e8a020" stroke-width="1.5" fill="none"/>
+
+  <!-- Name badge -->
+  <rect x="100" y="296" width="80" height="28" rx="8" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="140" y="308" text-anchor="middle" font-size="9" fill="white" font-family="Inter,sans-serif" font-weight="700">Ali Hassan</text>
+  <text x="140" y="318" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.6)" font-family="Inter,sans-serif">Shorthand Expert</text>
+</svg>

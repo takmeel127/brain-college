@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts — Brain College Admin</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    .post-editor{background:white;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-100);overflow:hidden;}
+    .editor-toolbar{display:flex;gap:6px;padding:12px 16px;background:var(--gray-50);border-bottom:1px solid var(--gray-100);flex-wrap:wrap;}
+    .toolbar-btn{padding:6px 12px;border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--gray-600);background:white;border:1px solid var(--gray-200);cursor:pointer;transition:all 0.15s;}
+    .toolbar-btn:hover{background:var(--admin-primary);color:white;border-color:var(--admin-primary);}
+    .editor-content{min-height:260px;padding:20px;outline:none;font-size:0.92rem;line-height:1.7;color:var(--gray-800);}
+    .editor-content:empty::before{content:'Write your post content here...';color:var(--gray-400);}
+    .post-card{background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);padding:18px;transition:all 0.2s;box-shadow:var(--shadow-sm);}
+    .post-card:hover{box-shadow:var(--shadow-md);}
+    .post-card-title{font-size:0.95rem;font-weight:700;color:var(--gray-900);margin-bottom:6px;line-height:1.4;}
+    .post-card-meta{font-size:0.76rem;color:var(--gray-400);display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:8px;}
+    .post-card-excerpt{font-size:0.84rem;color:var(--gray-500);line-height:1.6;margin-bottom:12px;}
+    .post-card-actions{display:flex;gap:8px;}
+    .post-list{display:flex;flex-direction:column;gap:14px;}
+  </style>
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="sidebar-brand"><div class="sidebar-brand-icon"><img src="../images/logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div><div class="sidebar-brand-text"><div class="sidebar-brand-title">Brain College</div><div class="sidebar-brand-sub">Admin Panel</div></div></div>
+    <div class="sidebar-admin-info"><div class="sidebar-admin-avatar"><i class="fas fa-user-shield"></i></div><div><div class="sidebar-admin-name" id="sidebarAdminName">Administrator</div><div class="sidebar-admin-role">Super Admin</div></div></div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Main</div>
+      <a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-th-large"></i></span> Dashboard</a>
+      <div class="sidebar-section-label">Content</div>
+      <a href="posts.html" class="sidebar-link active"><span class="link-icon"><i class="fas fa-pen-nib"></i></span> Posts</a>
+      <a href="results.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-poll"></i></span> Results</a>
+      <div class="sidebar-section-label">Admissions</div>
+      <a href="admissions.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-file-alt"></i></span> Applications</a>
+      <a href="students.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-user-graduate"></i></span> Students</a>
+      <div class="sidebar-section-label">Academic</div>
+      <a href="courses.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-book"></i></span> Courses</a>
+      <a href="faculty.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-chalkboard-teacher"></i></span> Faculty</a>
+      <div class="sidebar-section-label">Communication</div>
+      <a href="messages.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-envelope"></i></span> Messages</a>
+      <div class="sidebar-section-label">System</div>
+      <a href="settings.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-cog"></i></span> Settings</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="../index.html" class="sidebar-footer-link" target="_blank"><i class="fas fa-external-link-alt"></i> View Website</a>
+      <a href="#" class="sidebar-footer-link" data-logout><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div class="topbar-left">
+        <div class="topbar-toggle"><i class="fas fa-bars"></i></div>
+        <div class="topbar-breadcrumb"><span class="topbar-breadcrumb-item">Admin</span><span class="topbar-breadcrumb-sep"><i class="fas fa-chevron-right"></i></span><span class="topbar-breadcrumb-item active">Posts</span></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-btn"><i class="fas fa-bell"></i></div>
+        <a href="../index.html" target="_blank" class="topbar-view-site"><i class="fas fa-external-link-alt"></i> <span>View Site</span></a>
+        <div class="topbar-profile"><div class="topbar-profile-avatar" id="topbarAvatar">A</div><div><div class="topbar-profile-name" id="topbarName">Admin</div></div></div>
+      </div>
+    </div>
+
+    <div class="admin-content">
+      <div class="page-header">
+        <div><div class="page-title">Posts &amp; Announcements</div><div class="page-subtitle">Write and publish posts that appear on the website homepage</div></div>
+        <div class="page-actions">
+          <button class="btn btn-primary" id="newPostBtn"><i class="fas fa-plus"></i> Write New Post</button>
+        </div>
+      </div>
+
+      <!-- New / Edit Post Form -->
+      <div class="card" id="postFormCard" style="margin-bottom:24px;display:none;">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-pen-nib"></i> <span id="formTitle">Write New Post</span></div>
+          <button class="btn btn-outline btn-sm" id="cancelPostBtn"><i class="fas fa-times"></i> Cancel</button>
+        </div>
+        <div class="card-body">
+          <input type="hidden" id="editPostId">
+          <div class="form-group">
+            <label class="form-label">Post Title <span style="color:var(--error);">*</span></label>
+            <input type="text" id="postTitle" class="form-control" placeholder="e.g. New Batch Starting September 2026">
+          </div>
+          <div class="form-row" style="margin-bottom:16px;">
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select id="postCategory" class="form-control">
+                <option>Announcement</option>
+                <option>News</option>
+                <option>Event</option>
+                <option>Notice</option>
+                <option>Result</option>
+                <option>Holiday</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Status</label>
+              <select id="postPublished" class="form-control">
+                <option value="true">Published (Visible on website)</option>
+                <option value="false">Draft (Hidden)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Content <span style="color:var(--error);">*</span></label>
+            <div class="post-editor">
+              <div class="editor-toolbar">
+                <button class="toolbar-btn" onclick="formatText('bold')"><i class="fas fa-bold"></i></button>
+                <button class="toolbar-btn" onclick="formatText('italic')"><i class="fas fa-italic"></i></button>
+                <button class="toolbar-btn" onclick="formatText('underline')"><i class="fas fa-underline"></i></button>
+                <button class="toolbar-btn" onclick="formatText('insertUnorderedList')"><i class="fas fa-list-ul"></i></button>
+                <button class="toolbar-btn" onclick="formatText('insertOrderedList')"><i class="fas fa-list-ol"></i></button>
+                <button class="toolbar-btn" onclick="document.getElementById('postContent').innerHTML=''">Clear</button>
+              </div>
+              <div id="postContent" class="editor-content" contenteditable="true"></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:8px;">
+            <button class="btn btn-primary" id="savePostBtn"><i class="fas fa-save"></i> Save &amp; Publish</button>
+            <button class="btn btn-outline" id="saveDraftBtn"><i class="fas fa-file"></i> Save as Draft</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Posts List -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-newspaper"></i> All Posts</div>
+          <span id="postCount" style="font-size:0.8rem;color:var(--gray-400);"></span>
+        </div>
+        <div class="card-body">
+          <div class="post-list" id="postList">
+            <div style="text-align:center;padding:40px;color:var(--gray-400);"><i class="fas fa-spinner fa-spin" style="font-size:1.5rem;"></i><div style="margin-top:8px;">Loading posts...</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/admin.js"></script>
+<script>
+  if (!BC_AUTH.requireAdmin()) throw new Error('Not admin');
+  const user = BC_AUTH.currentUser();
+  document.getElementById('topbarAvatar').textContent = user.avatar || 'A';
+  document.getElementById('topbarName').textContent = user.name.split(' ')[0];
+  document.getElementById('sidebarAdminName').textContent = user.name.split(' ')[0];
+
+  function formatText(cmd) { document.execCommand(cmd, false, null); document.getElementById('postContent').focus(); }
+
+  function renderPosts() {
+    const posts = BC_AUTH.getPosts(false).sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt));
+    document.getElementById('postCount').textContent = posts.length + ' posts';
+    const list = document.getElementById('postList');
+    if (!posts.length) { list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--gray-400);"><i class="fas fa-newspaper" style="font-size:2rem;margin-bottom:10px;"></i><div>No posts yet. Write your first post!</div></div>'; return; }
+    list.innerHTML = posts.map(p => `
+      <div class="post-card">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;">
+          <div style="flex:1;">
+            <div class="post-card-title">${p.title}</div>
+            <div class="post-card-meta">
+              <span class="badge badge-primary">${p.category}</span>
+              <span><i class="fas fa-user" style="margin-right:4px;"></i>${p.author}</span>
+              <span><i class="fas fa-calendar" style="margin-right:4px;"></i>${BC_AUTH.formatDate(p.createdAt)}</span>
+            </div>
+            <div class="post-card-excerpt">${(p.content || '').replace(/<[^>]+>/g, '').substring(0, 120)}...</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;">
+            <span class="badge ${p.published ? 'badge-active' : 'badge-inactive'}">${p.published ? '● Published' : '○ Draft'}</span>
+          </div>
+        </div>
+        <div class="post-card-actions">
+          <button class="btn btn-outline btn-sm" onclick="editPost('${p.id}')"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-outline btn-sm" onclick="togglePublish('${p.id}',${p.published})"><i class="fas fa-${p.published ? 'eye-slash' : 'eye'}"></i> ${p.published ? 'Unpublish' : 'Publish'}</button>
+          <button class="btn btn-outline btn-sm" onclick="deletePost('${p.id}')" style="color:var(--error);border-color:var(--error);"><i class="fas fa-trash"></i> Delete</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  document.getElementById('newPostBtn').addEventListener('click', () => {
+    document.getElementById('editPostId').value = '';
+    document.getElementById('postTitle').value = '';
+    document.getElementById('postContent').innerHTML = '';
+    document.getElementById('postPublished').value = 'true';
+    document.getElementById('formTitle').textContent = 'Write New Post';
+    document.getElementById('postFormCard').style.display = 'block';
+    document.getElementById('postFormCard').scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+  document.getElementById('cancelPostBtn').addEventListener('click', () => { document.getElementById('postFormCard').style.display = 'none'; });
+
+  function savePost(published) {
+    const title   = document.getElementById('postTitle').value.trim();
+    const content = document.getElementById('postContent').innerHTML.trim();
+    const cat     = document.getElementById('postCategory').value;
+    const id      = document.getElementById('editPostId').value;
+    if (!title || !content) { showToast('Please enter title and content.','error'); return; }
+    BC_AUTH.savePost({ id: id || null, title, content, category: cat, published, image:'' });
+    document.getElementById('postFormCard').style.display = 'none';
+    renderPosts();
+    showToast(published ? 'Post published successfully!' : 'Post saved as draft.', 'success');
+  }
+
+  document.getElementById('savePostBtn').addEventListener('click', () => savePost(true));
+  document.getElementById('saveDraftBtn').addEventListener('click', () => savePost(false));
+
+  function editPost(id) {
+    const p = BC_AUTH.getPostById(id);
+    if (!p) return;
+    document.getElementById('editPostId').value = p.id;
+    document.getElementById('postTitle').value = p.title;
+    document.getElementById('postContent').innerHTML = p.content;
+    document.getElementById('postCategory').value = p.category;
+    document.getElementById('postPublished').value = String(p.published);
+    document.getElementById('formTitle').textContent = 'Edit Post';
+    document.getElementById('postFormCard').style.display = 'block';
+    document.getElementById('postFormCard').scrollIntoView({ behavior:'smooth', block:'start' });
+  }
+
+  function togglePublish(id, current) {
+    BC_AUTH.togglePostPublish(id);
+    renderPosts();
+    showToast(current ? 'Post unpublished.' : 'Post published!', 'success');
+  }
+
+  function deletePost(id) {
+    if (!confirm('Delete this post permanently?')) return;
+    BC_AUTH.deletePost(id);
+    renderPosts();
+    showToast('Post deleted.', 'success');
+  }
+
+  renderPosts();
+</script>
+</body>
+</html>

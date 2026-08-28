@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — The Brain College Bhakkar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+<div id="preloader"><div class="preloader-inner"><div class="preloader-logo"><img src="images/logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"></div><div class="preloader-text">Loading...</div><div class="preloader-bar"><div class="preloader-progress"></div></div></div></div>
+<a href="https://wa.me/923338044574" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<div class="mobile-overlay"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-header"><div class="nav-logo"><div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div class="nav-logo-text"><div class="nav-logo-title">Brain College</div><div class="nav-logo-sub">Bhakkar</div></div></div><div class="mobile-nav-close"><i class="fas fa-times"></i></div></div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+    <a href="results.html" class="mobile-nav-link"><i class="fas fa-poll"></i> Results</a>
+    <a href="admission-status.html" class="mobile-nav-link"><i class="fas fa-search"></i> Admission Status</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  <a href="admission.html" class="mobile-nav-apply">Apply Now 2026</a>
+</nav>
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div class="nav-logo-text"><div class="nav-logo-title">The Brain College</div><div class="nav-logo-sub">Bhakkar — Est. 2011</div></div></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="results.html" class="nav-link active">Results</a>
+        <a href="admission-status.html" class="nav-link">Status</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="admission.html" class="nav-apply-btn">Apply Now 2026</a>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner page-banner-results">
+  <div class="container">
+    <div class="page-banner-inner">
+      <div class="breadcrumb" style="margin-bottom:12px;"><a href="index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-sep"><i class="fas fa-chevron-right"></i></span><span class="breadcrumb-item active">Results</span></div>
+      <h1 class="page-banner-title">Result Portal</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1rem;margin-top:8px;">Check your exam result by entering your Roll Number</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div style="max-width:620px;margin:0 auto;">
+
+      <!-- Demo roll numbers hint -->
+      <div style="background:rgba(26,60,110,0.04);border:1px dashed rgba(26,60,110,0.20);border-radius:var(--radius-md);padding:14px 18px;margin-bottom:24px;font-size:0.84rem;color:var(--gray-600);" class="reveal">
+        <strong style="color:var(--primary);"><i class="fas fa-lightbulb"></i> Demo Roll Numbers:</strong><br>
+        <span style="font-family:monospace;">BRAIN-2026-10125</span> &nbsp;|&nbsp;
+        <span style="font-family:monospace;">BRAIN-2026-20200</span> &nbsp;|&nbsp;
+        <span style="font-family:monospace;">BRAIN-2026-30088</span> &nbsp;|&nbsp;
+        <span style="font-family:monospace;">BRAIN-2026-70089</span>
+      </div>
+
+      <!-- Search Card -->
+      <div style="background:white;border-radius:var(--radius-xl);padding:36px;box-shadow:var(--shadow-xl);border:1px solid var(--gray-100);margin-bottom:28px;" class="reveal">
+        <div style="text-align:center;margin-bottom:28px;">
+          <div style="width:68px;height:68px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:white;box-shadow:var(--shadow-primary);">
+            <i class="fas fa-poll"></i>
+          </div>
+          <h2 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--gray-900);margin-bottom:6px;">Check Your Result</h2>
+          <p style="font-size:0.88rem;color:var(--gray-500);">Enter your Roll Number to view your result</p>
+        </div>
+
+        <div class="form-group" style="margin-bottom:16px;">
+          <label class="form-label">Roll Number <span style="color:var(--error);">*</span></label>
+          <div style="position:relative;">
+            <i class="fas fa-id-card" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-400);"></i>
+            <input type="text" id="rollInput" class="form-control" placeholder="e.g. BRAIN-2026-10125" style="padding-left:40px;text-transform:uppercase;font-family:monospace;font-size:1rem;letter-spacing:0.5px;">
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:24px;">
+          <label class="form-label">Name (Optional)</label>
+          <div style="position:relative;">
+            <i class="fas fa-user" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-400);"></i>
+            <input type="text" id="nameInput" class="form-control" placeholder="Your full name" style="padding-left:40px;">
+          </div>
+        </div>
+
+        <button id="checkResultBtn" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+          <i class="fas fa-search"></i> Check My Result
+        </button>
+      </div>
+
+      <!-- Not Found -->
+      <div id="resultNotFound" style="display:none;text-align:center;padding:32px;background:white;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);border:1px solid var(--gray-100);">
+        <div style="width:64px;height:64px;background:rgba(239,68,68,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem;color:var(--error);"><i class="fas fa-times-circle"></i></div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:8px;">Result Not Found</h3>
+        <p style="font-size:0.88rem;color:var(--gray-500);margin-bottom:20px;">No result found for this Roll Number. Please verify and try again, or contact the college.</p>
+        <a href="contact.html" class="btn btn-outline btn-sm"><i class="fas fa-phone"></i> Contact College</a>
+      </div>
+
+      <!-- Result Card -->
+      <div id="resultCard" style="display:none;" class="reveal">
+        <div style="background:white;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);border:1px solid var(--gray-100);">
+
+          <!-- Result header -->
+          <div id="resultHeader" style="padding:28px;text-align:center;position:relative;overflow:hidden;">
+            <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;"></div>
+            <div style="position:relative;">
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">The Brain College Bhakkar — Result</div>
+              <div id="resGrade" style="font-size:4rem;font-weight:900;color:white;line-height:1;">A</div>
+              <div id="resMarks" style="font-size:1.2rem;color:rgba(255,255,255,0.85);margin-top:4px;">88 / 100</div>
+              <div id="resBadge" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:20px;padding:6px 18px;font-size:0.85rem;font-weight:700;color:white;margin-top:12px;">✅ PASS</div>
+            </div>
+          </div>
+
+          <!-- Result details -->
+          <div style="padding:24px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+              <div style="padding:14px;background:var(--gray-50);border-radius:var(--radius-sm);border:1px solid var(--gray-100);">
+                <div style="font-size:0.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">Roll Number</div>
+                <div id="resRoll" style="font-size:0.85rem;font-weight:700;color:var(--gray-800);font-family:monospace;">—</div>
+              </div>
+              <div style="padding:14px;background:var(--gray-50);border-radius:var(--radius-sm);border:1px solid var(--gray-100);">
+                <div style="font-size:0.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">Student Name</div>
+                <div id="resName" style="font-size:0.9rem;font-weight:700;color:var(--gray-800);">—</div>
+              </div>
+              <div style="padding:14px;background:var(--gray-50);border-radius:var(--radius-sm);border:1px solid var(--gray-100);">
+                <div style="font-size:0.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">Course</div>
+                <div id="resCourse" style="font-size:0.9rem;font-weight:700;color:var(--gray-800);">—</div>
+              </div>
+              <div style="padding:14px;background:var(--gray-50);border-radius:var(--radius-sm);border:1px solid var(--gray-100);">
+                <div style="font-size:0.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">Batch</div>
+                <div id="resBatch" style="font-size:0.9rem;font-weight:700;color:var(--gray-800);">—</div>
+              </div>
+              <div style="padding:14px;background:var(--gray-50);border-radius:var(--radius-sm);border:1px solid var(--gray-100);">
+                <div style="font-size:0.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">Percentage</div>
+                <div id="resPercent" style="font-size:0.9rem;font-weight:700;color:var(--primary);">—</div>
+              </div>
+              <div style="padding:14px;background:var(--gray-50);border-radius:var(--radius-sm);border:1px solid var(--gray-100);">
+                <div style="font-size:0.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;">Published Date</div>
+                <div id="resDate" style="font-size:0.9rem;font-weight:700;color:var(--gray-800);">—</div>
+              </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div style="margin-bottom:20px;">
+              <div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--gray-500);margin-bottom:6px;">
+                <span>Score Progress</span><span id="resPercent2">0%</span>
+              </div>
+              <div style="height:10px;background:var(--gray-100);border-radius:5px;overflow:hidden;">
+                <div id="resProgressBar" style="height:100%;border-radius:5px;background:linear-gradient(90deg,var(--primary),var(--accent));width:0%;transition:width 1s ease;"></div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <button onclick="window.print()" class="btn btn-primary btn-sm"><i class="fas fa-print"></i> Print Result</button>
+              <a href="contact.html" class="btn btn-outline btn-sm"><i class="fas fa-phone"></i> Contact College</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Grade legend -->
+<section class="section-sm" style="background:var(--gray-50);">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;">
+      <h3 style="font-family:var(--font-heading);font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:16px;text-align:center;" class="reveal">Grading System</h3>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;" class="reveal">
+        <div style="text-align:center;padding:16px 10px;background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);"><div style="font-size:1.6rem;font-weight:900;color:#10b981;">A+</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">90–100%</div></div>
+        <div style="text-align:center;padding:16px 10px;background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);"><div style="font-size:1.6rem;font-weight:900;color:#1a3c6e;">A</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">80–89%</div></div>
+        <div style="text-align:center;padding:16px 10px;background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);"><div style="font-size:1.6rem;font-weight:900;color:#2554a0;">B+</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">75–79%</div></div>
+        <div style="text-align:center;padding:16px 10px;background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);"><div style="font-size:1.6rem;font-weight:900;color:#3b82f6;">B</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">65–74%</div></div>
+        <div style="text-align:center;padding:16px 10px;background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);"><div style="font-size:1.6rem;font-weight:900;color:#f59e0b;">C</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">55–64%</div></div>
+        <div style="text-align:center;padding:16px 10px;background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);"><div style="font-size:1.6rem;font-weight:900;color:#f97316;">D</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">40–54%</div></div>
+        <div style="text-align:center;padding:16px 10px;background:white;border-radius:var(--radius-md);border:1px solid var(--gray-100);"><div style="font-size:1.6rem;font-weight:900;color:#ef4444;">F</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">Below 40%</div></div>
+        <div style="text-align:center;padding:16px 10px;background:rgba(16,185,129,0.06);border-radius:var(--radius-md);border:1px solid rgba(16,185,129,0.2);"><div style="font-size:1rem;font-weight:700;color:#10b981;">Pass</div><div style="font-size:0.75rem;color:var(--gray-500);margin-top:4px;">≥ 40%</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand-logo"><div class="footer-brand-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div><div class="footer-brand-title">The Brain College</div></div></div><p class="footer-brand-desc">Professional education since 2011.</p></div>
+      <div><div class="footer-col-title">Quick Links</div><div class="footer-links"><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a><a href="courses.html" class="footer-link"><i class="fas fa-chevron-right"></i> Courses</a><a href="admission.html" class="footer-link"><i class="fas fa-chevron-right"></i> Apply</a></div></div>
+      <div><div class="footer-col-title">Student</div><div class="footer-links"><a href="results.html" class="footer-link"><i class="fas fa-chevron-right"></i> Results</a><a href="admission-status.html" class="footer-link"><i class="fas fa-chevron-right"></i> Status</a><a href="user-dashboard.html" class="footer-link"><i class="fas fa-chevron-right"></i> Dashboard</a></div></div>
+      <div><div class="footer-col-title">Contact</div><div class="footer-contact-items"><div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><div class="footer-contact-text">Darya Khan Road, Bhakkar</div></div><div class="footer-contact-item"><i class="fas fa-phone"></i><div class="footer-contact-text">0333-8044574</div></div></div></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-text">© 2026 The Brain College Bhakkar.</div></div>
+  </div>
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.getElementById('checkResultBtn').addEventListener('click', () => {
+  const roll = document.getElementById('rollInput').value.trim().toUpperCase();
+  const card = document.getElementById('resultCard');
+  const notFound = document.getElementById('resultNotFound');
+  card.style.display = 'none';
+  notFound.style.display = 'none';
+  if (!roll) return;
+
+  const result = BC_AUTH.getResultByRollNo(roll);
+  if (!result) { notFound.style.display = 'block'; return; }
+
+  const isPass = result.status === 'Pass';
+  const headerColors = isPass
+    ? 'linear-gradient(135deg,#065f46,#10b981)'
+    : 'linear-gradient(135deg,#991b1b,#ef4444)';
+
+  document.getElementById('resultHeader').style.background = headerColors;
+  document.getElementById('resGrade').textContent   = result.grade;
+  document.getElementById('resMarks').textContent   = result.marks + ' / ' + result.total;
+  document.getElementById('resBadge').textContent   = isPass ? '✅ PASS' : '❌ FAIL';
+  document.getElementById('resRoll').textContent    = result.rollNo;
+  document.getElementById('resName').textContent    = result.studentName;
+  document.getElementById('resCourse').textContent  = result.course;
+  document.getElementById('resBatch').textContent   = result.batch;
+  document.getElementById('resPercent').textContent = result.percentage;
+  document.getElementById('resPercent2').textContent= result.percentage;
+  document.getElementById('resDate').textContent    = result.publishedAt;
+
+  card.style.display = 'block';
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  // Animate progress bar
+  setTimeout(() => {
+    document.getElementById('resProgressBar').style.width = result.percentage;
+    document.getElementById('resProgressBar').style.background = isPass
+      ? 'linear-gradient(90deg,#10b981,#059669)'
+      : 'linear-gradient(90deg,#ef4444,#dc2626)';
+  }, 200);
+});
+
+// Auto-fill from URL ?roll=BRAIN-2026-XXXXX
+const urlRoll = new URLSearchParams(window.location.search).get('roll');
+if (urlRoll) {
+  document.getElementById('rollInput').value = urlRoll.toUpperCase();
+  document.getElementById('checkResultBtn').click();
+}
+</script>
+</body>
+</html>

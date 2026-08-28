@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1e4d8c"/><stop offset="100%" stop-color="#0f2444"/></linearGradient>
+    <linearGradient id="skin3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c8845a"/><stop offset="100%" stop-color="#b06840"/></linearGradient>
+    <linearGradient id="suit3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1e4d8c"/><stop offset="100%" stop-color="#2554a0"/></linearGradient>
+    <radialGradient id="glow3" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#2554a0" stop-opacity="0.4"/><stop offset="100%" stop-color="#0f2444" stop-opacity="0"/></radialGradient>
+  </defs>
+
+  <rect width="280" height="320" fill="url(#bg3)"/>
+  <ellipse cx="140" cy="110" rx="130" ry="130" fill="url(#glow3)"/>
+  <g opacity="0.04" stroke="white" stroke-width="0.5">
+    <line x1="0" y1="80" x2="280" y2="80"/><line x1="0" y1="160" x2="280" y2="160"/><line x1="0" y1="240" x2="280" y2="240"/>
+    <line x1="70" y1="0" x2="70" y2="320"/><line x1="140" y1="0" x2="140" y2="320"/><line x1="210" y1="0" x2="210" y2="320"/>
+  </g>
+
+  <!-- Body -->
+  <rect x="62" y="204" width="156" height="140" rx="16" fill="url(#suit3)"/>
+  <!-- White shirt -->
+  <rect x="108" y="204" width="64" height="90" rx="8" fill="white" opacity="0.92"/>
+  <!-- Jacket lapels -->
+  <path d="M62 204 L84 204 L112 262 L62 284Z" fill="#0a1628"/>
+  <path d="M218 204 L196 204 L168 262 L218 284Z" fill="#0a1628"/>
+  <!-- Tie blue -->
+  <path d="M133 206 L147 206 L149 262 L140 270 L131 262Z" fill="#1a3c6e"/>
+  <path d="M133 206 L140 198 L147 206Z" fill="#0f2444"/>
+  <!-- Pocket square -->
+  <path d="M75 218 L82 218 L78 228Z" fill="rgba(255,255,255,0.5)"/>
+
+  <!-- Neck -->
+  <rect x="124" y="186" width="32" height="24" rx="10" fill="url(#skin3)"/>
+
+  <!-- Head -->
+  <ellipse cx="140" cy="156" rx="52" ry="58" fill="url(#skin3)"/>
+
+  <!-- Ears -->
+  <ellipse cx="88" cy="162" rx="8" ry="12" fill="url(#skin3)"/>
+  <ellipse cx="192" cy="162" rx="8" ry="12" fill="url(#skin3)"/>
+  <ellipse cx="88" cy="162" rx="4.5" ry="7" fill="#b06840" opacity="0.5"/>
+  <ellipse cx="192" cy="162" rx="4.5" ry="7" fill="#b06840" opacity="0.5"/>
+
+  <!-- Hair short neat -->
+  <path d="M88 138 Q92 108 140 104 Q188 108 192 138 Q188 112 140 108 Q92 112 88 138Z" fill="#0a0500"/>
+
+  <!-- Eyes -->
+  <ellipse cx="122" cy="157" rx="6" ry="6.5" fill="#1a1a1a"/>
+  <ellipse cx="158" cy="157" rx="6" ry="6.5" fill="#1a1a1a"/>
+  <circle cx="124" cy="155" r="2.2" fill="white"/>
+  <circle cx="160" cy="155" r="2.2" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M112 143 Q122 138 132 143" stroke="#0a0500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M148 143 Q158 138 168 143" stroke="#0a0500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M136 168 Q140 175 144 168" stroke="rgba(0,0,0,0.22)" stroke-width="1.5" fill="none"/>
+  <!-- Warm smile -->
+  <path d="M127 182 Q140 192 153 182" stroke="rgba(0,0,0,0.28)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Light beard -->
+  <path d="M116 190 Q122 198 140 200 Q158 198 164 190" stroke="#1a0800" stroke-width="1" fill="rgba(26,8,0,0.08)"/>
+
+  <!-- Arms -->
+  <rect x="48" y="214" width="28" height="62" rx="10" fill="url(#suit3)"/>
+  <rect x="204" y="214" width="28" height="62" rx="10" fill="url(#suit3)"/>
+  <ellipse cx="62" cy="280" rx="15" ry="11" fill="url(#skin3)"/>
+  <ellipse cx="218" cy="280" rx="15" ry="11" fill="url(#skin3)"/>
+  <!-- Laptop in arms -->
+  <rect x="200" y="258" width="44" height="30" rx="6" fill="#0d1b2e"/>
+  <rect x="204" y="262" width="36" height="22" rx="4" fill="#1a3c6e"/>
+  <rect x="206" y="264" width="28" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="206" y="271" width="22" height="4" rx="2" fill="#e8a020" opacity="0.5"/>
+  <rect x="206" y="278" width="26" height="3" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Name badge -->
+  <rect x="100" y="296" width="80" height="28" rx="8" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="140" y="308" text-anchor="middle" font-size="9" fill="white" font-family="Inter,sans-serif" font-weight="700">T. Mehmood</text>
+  <text x="140" y="318" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.6)" font-family="Inter,sans-serif">IT Instructor</text>
+</svg>

@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#0f2444"/></linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3c6e"/><stop offset="100%" stop-color="#0f2444"/></linearGradient>
+    <linearGradient id="scrn" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d1b2e"/><stop offset="100%" stop-color="#1a3c6e"/></linearGradient>
+    <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c8845a"/><stop offset="100%" stop-color="#b06840"/></linearGradient>
+    <linearGradient id="unif" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a3c6e"/><stop offset="100%" stop-color="#2554a0"/></linearGradient>
+    <filter id="sf" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#050d1a" flood-opacity="0.4"/></filter>
+    <radialGradient id="screenLight" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a3c6e" stop-opacity="0.3"/><stop offset="100%" stop-color="#0a1628" stop-opacity="0"/></radialGradient>
+  </defs>
+
+  <!-- Room -->
+  <rect width="480" height="360" fill="url(#room)"/>
+  <!-- Back wall texture -->
+  <rect x="0" y="0" width="480" height="220" fill="rgba(255,255,255,0.02)"/>
+  <line x1="0" y1="220" x2="480" y2="220" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Floor -->
+  <rect x="0" y="280" width="480" height="80" fill="#07101e"/>
+  <!-- Floor tiles -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="300" x2="480" y2="300"/><line x1="0" y1="320" x2="480" y2="320"/><line x1="0" y1="340" x2="480" y2="340"/>
+    <line x1="80" y1="280" x2="80" y2="360"/><line x1="160" y1="280" x2="160" y2="360"/><line x1="240" y1="280" x2="240" y2="360"/>
+    <line x1="320" y1="280" x2="320" y2="360"/><line x1="400" y1="280" x2="400" y2="360"/>
+  </g>
+
+  <!-- Overhead light -->
+  <rect x="180" y="0" width="120" height="6" rx="3" fill="#e8a020" opacity="0.6"/>
+  <ellipse cx="240" cy="8" rx="100" ry="30" fill="rgba(232,160,32,0.06)"/>
+
+  <!-- Desk row back -->
+  <rect x="0" y="240" width="480" height="14" rx="3" fill="url(#desk)" filter="url(#sf)"/>
+  <rect x="0" y="252" width="480" height="6" rx="3" fill="#0a1628"/>
+
+  <!-- ── GIRL 1 (LEFT) ── -->
+  <g filter="url(#sf)">
+    <!-- Monitor -->
+    <rect x="30" y="130" width="130" height="100" rx="8" fill="#0d1b2e"/>
+    <rect x="38" y="138" width="114" height="84" rx="6" fill="url(#scrn)"/>
+    <rect x="38" y="138" width="114" height="84" rx="6" fill="url(#screenLight)"/>
+    <!-- Screen content - typing app -->
+    <rect x="38" y="138" width="114" height="14" rx="6" fill="rgba(37,84,160,0.3)"/>
+    <text x="50" y="149" font-size="7" fill="rgba(255,255,255,0.6)" font-family="Inter,sans-serif">Typing Speed: 45 WPM</text>
+    <rect x="46" y="160" width="90" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="46" y="170" width="76" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="46" y="180" width="84" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="46" y="190" width="58" height="4" rx="2" fill="#e8a020" opacity="0.7"/>
+    <rect x="46" y="200" width="78" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+    <rect x="46" y="210" width="2" height="10" rx="1" fill="#f5bc50"/><!-- cursor -->
+    <!-- Stand -->
+    <rect x="88" y="230" width="14" height="12" rx="2" fill="#0d1b2e"/>
+    <rect x="82" y="240" width="26" height="5" rx="2" fill="#0a1628"/>
+    <!-- Keyboard -->
+    <rect x="34" y="238" width="90" height="6" rx="3" fill="#1a2a44"/>
+
+    <!-- Girl 1 figure -->
+    <!-- Hijab -->
+    <ellipse cx="88" cy="118" rx="22" ry="24" fill="#0f2444"/>
+    <!-- Face -->
+    <ellipse cx="88" cy="122" rx="16" ry="18" fill="url(#sk)"/>
+    <!-- Hijab drape -->
+    <path d="M66 118 Q67 130 72 140 Q80 144 88 145 Q96 144 104 140 Q109 130 110 118" fill="#1a3c6e"/>
+    <path d="M66 114 Q69 100 88 97 Q107 100 110 114 Q108 102 88 100 Q68 102 66 114Z" fill="#0f2444"/>
+    <!-- Eyes -->
+    <ellipse cx="83" cy="118" rx="3" ry="3.5" fill="#1a1a1a"/>
+    <ellipse cx="93" cy="118" rx="3" ry="3.5" fill="#1a1a1a"/>
+    <circle cx="84" cy="117" r="1.1" fill="white"/>
+    <circle cx="94" cy="117" r="1.1" fill="white"/>
+    <!-- Smile -->
+    <path d="M84 126 Q88 130 92 126" stroke="rgba(0,0,0,0.25)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <!-- Body -->
+    <rect x="68" y="144" width="40" height="50" rx="7" fill="url(#unif)"/>
+    <!-- Arms -->
+    <rect x="58" y="154" width="14" height="30" rx="5" fill="url(#unif)"/>
+    <rect x="108" y="154" width="14" height="30" rx="5" fill="url(#unif)"/>
+    <ellipse cx="65" cy="186" rx="8" ry="5" fill="url(#sk)"/>
+    <ellipse cx="115" cy="186" rx="8" ry="5" fill="url(#sk)"/>
+  </g>
+
+  <!-- ── GIRL 2 (CENTER) ── -->
+  <g filter="url(#sf)">
+    <rect x="165" y="118" width="140" height="108" rx="8" fill="#0d1b2e"/>
+    <rect x="173" y="126" width="124" height="92" rx="6" fill="url(#scrn)"/>
+    <rect x="173" y="126" width="124" height="92" rx="6" fill="url(#screenLight)"/>
+    <!-- MS Word doc -->
+    <rect x="173" y="126" width="124" height="15" rx="6" fill="rgba(37,84,160,0.3)"/>
+    <text x="183" y="137" font-size="7" fill="rgba(255,255,255,0.65)" font-family="Inter,sans-serif">Microsoft Word</text>
+    <!-- Content bars -->
+    <rect x="183" y="148" width="100" height="5" rx="2" fill="rgba(255,255,255,0.25)"/>
+    <rect x="183" y="159" width="88" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="183" y="168" width="96" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="183" y="177" width="72" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="183" y="186" width="88" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="183" y="195" width="60" height="4" rx="2" fill="#e8a020" opacity="0.6"/>
+    <rect x="183" y="204" width="80" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+    <rect x="183" y="213" width="2" height="10" rx="1" fill="#f5bc50"/>
+    <rect x="175" y="226" width="24" height="14" rx="3" fill="#0d1b2e"/>
+    <rect x="169" y="238" width="36" height="5" rx="2" fill="#0a1628"/>
+    <rect x="165" y="235" width="112" height="6" rx="3" fill="#1a2a44"/>
+
+    <!-- Girl 2 - larger/central -->
+    <ellipse cx="232" cy="104" rx="24" ry="26" fill="#0f2444"/>
+    <ellipse cx="232" cy="108" rx="18" ry="20" fill="url(#sk)"/>
+    <path d="M208 104 Q209 118 214 130 Q222 136 232 137 Q242 136 250 130 Q255 118 256 104" fill="#1a3c6e"/>
+    <path d="M208 100 Q212 82 232 79 Q252 82 256 100 Q254 84 232 81 Q210 84 208 100Z" fill="#0f2444"/>
+    <!-- Eyes + smile focused working -->
+    <ellipse cx="226" cy="104" rx="3.2" ry="4" fill="#1a1a1a"/>
+    <ellipse cx="238" cy="104" rx="3.2" ry="4" fill="#1a1a1a"/>
+    <circle cx="227" cy="103" r="1.2" fill="white"/>
+    <circle cx="239" cy="103" r="1.2" fill="white"/>
+    <!-- Focused look (slight squint) -->
+    <path d="M222 99 Q226 96 230 99" stroke="#0a0500" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M234 99 Q238 96 242 99" stroke="#0a0500" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M227 112 Q232 116 237 112" stroke="rgba(0,0,0,0.22)" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <rect x="212" y="136" width="40" height="56" rx="8" fill="url(#unif)"/>
+    <rect x="200" y="146" width="16" height="34" rx="6" fill="url(#unif)"/>
+    <rect x="248" y="146" width="16" height="34" rx="6" fill="url(#unif)"/>
+    <ellipse cx="208" cy="182" rx="9" ry="6" fill="url(#sk)"/>
+    <ellipse cx="256" cy="182" rx="9" ry="6" fill="url(#sk)"/>
+  </g>
+
+  <!-- ── GIRL 3 (RIGHT) ── -->
+  <g filter="url(#sf)">
+    <rect x="318" y="132" width="126" height="98" rx="8" fill="#0d1b2e"/>
+    <rect x="326" y="140" width="110" height="82" rx="6" fill="url(#scrn)"/>
+    <rect x="326" y="140" width="110" height="82" rx="6" fill="url(#screenLight)"/>
+    <!-- PowerPoint slide look -->
+    <rect x="326" y="140" width="110" height="13" rx="6" fill="rgba(232,160,32,0.2)"/>
+    <text x="336" y="150" font-size="7" fill="rgba(255,255,255,0.6)" font-family="Inter,sans-serif">PowerPoint</text>
+    <rect x="336" y="162" width="80" height="8" rx="3" fill="rgba(37,84,160,0.5)"/><!-- title bar -->
+    <rect x="336" y="175" width="40" height="24" rx="4" fill="rgba(232,160,32,0.2)"/><!-- image placeholder -->
+    <rect x="382" y="175" width="48" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="382" y="184" width="38" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="382" y="192" width="42" height="4" rx="2" fill="rgba(255,255,255,0.12)"/>
+    <rect x="336" y="205" width="90" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+    <rect x="336" y="211" width="70" height="3" rx="1.5" fill="rgba(255,255,255,0.08)"/>
+    <rect x="376" y="230" width="12" height="10" rx="2" fill="#0d1b2e"/>
+    <rect x="370" y="238" width="24" height="4" rx="2" fill="#0a1628"/>
+    <rect x="322" y="234" width="96" height="6" rx="3" fill="#1a2a44"/>
+
+    <!-- Girl 3 -->
+    <ellipse cx="376" cy="116" rx="20" ry="22" fill="#0f2444"/>
+    <ellipse cx="376" cy="119" rx="15" ry="17" fill="url(#sk)"/>
+    <path d="M356 116 Q357 128 362 138 Q369 143 376 144 Q383 143 390 138 Q395 128 396 116" fill="#2554a0" opacity="0.9"/>
+    <path d="M356 112 Q359 96 376 93 Q393 96 396 112 Q394 98 376 95 Q358 98 356 112Z" fill="#0f2444"/>
+    <ellipse cx="371" cy="116" rx="2.8" ry="3.5" fill="#1a1a1a"/>
+    <ellipse cx="381" cy="116" rx="2.8" ry="3.5" fill="#1a1a1a"/>
+    <circle cx="372" cy="115" r="1" fill="white"/>
+    <circle cx="382" cy="115" r="1" fill="white"/>
+    <path d="M372 123 Q376 127 380 123" stroke="rgba(0,0,0,0.22)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <rect x="360" y="143" width="32" height="48" rx="6" fill="url(#unif)"/>
+    <rect x="350" y="152" width="12" height="28" rx="5" fill="url(#unif)"/>
+    <rect x="390" y="152" width="12" height="28" rx="5" fill="url(#unif)"/>
+    <ellipse cx="356" cy="182" rx="7" ry="5" fill="url(#sk)"/>
+    <ellipse cx="396" cy="182" rx="7" ry="5" fill="url(#sk)"/>
+  </g>
+
+  <!-- Room label / poster on wall -->
+  <rect x="180" y="24" width="120" height="40" rx="8" fill="rgba(232,160,32,0.12)" stroke="rgba(232,160,32,0.25)" stroke-width="1"/>
+  <text x="240" y="42" text-anchor="middle" font-size="10" fill="#f5bc50" font-family="Inter,sans-serif" font-weight="700">FEMALE COMPUTER LAB</text>
+  <text x="240" y="56" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.5)" font-family="Inter,sans-serif">Brain College Bhakkar</text>
+
+  <!-- Decorative elements -->
+  <circle cx="440" cy="30" r="20" fill="none" stroke="rgba(232,160,32,0.12)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <circle cx="30" cy="50" r="12" fill="rgba(37,84,160,0.1)"/>
+</svg>

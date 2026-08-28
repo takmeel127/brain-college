@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — The Brain College Bhakkar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    body { min-height:100vh; background:linear-gradient(135deg,#0a1628 0%,#0f2444 40%,#1a3c6e 100%); display:flex; align-items:center; justify-content:center; padding:20px; overflow:hidden; }
+    /* Orbs */
+    .orb { position:fixed; border-radius:50%; filter:blur(80px); pointer-events:none; }
+    .orb-1 { width:500px;height:500px; background:radial-gradient(circle,rgba(37,84,160,0.35) 0%,transparent 70%); top:-100px;left:-100px; animation:orb-drift 12s ease-in-out infinite; }
+    .orb-2 { width:400px;height:400px; background:radial-gradient(circle,rgba(232,160,32,0.18) 0%,transparent 70%); bottom:-80px;right:-80px; animation:orb-drift 16s ease-in-out infinite reverse; }
+    @keyframes orb-drift { 0%,100%{transform:translate(0,0);}50%{transform:translate(30px,-20px);} }
+    /* Grid overlay */
+    body::before { content:''; position:fixed;inset:0; background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px); background-size:60px 60px; pointer-events:none; }
+
+    .gs-card { background:rgba(255,255,255,0.97); border-radius:28px; padding:0; width:100%; max-width:960px; box-shadow:0 30px 80px rgba(0,0,0,0.4); overflow:hidden; display:grid; grid-template-columns:1fr 1fr; animation:gs-in 0.5s cubic-bezier(0.4,0,0.2,1); }
+    @keyframes gs-in { from{opacity:0;transform:scale(0.94) translateY(20px);} to{opacity:1;transform:none;} }
+    @media(max-width:700px){ .gs-card{grid-template-columns:1fr;} .gs-left{display:none;} }
+
+    /* Left panel */
+    .gs-left { background:linear-gradient(135deg,#0a1628 0%,#0f2444 50%,#1a3c6e 100%); padding:52px 44px; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden; }
+    .gs-left::before { content:''; position:absolute;inset:0; background:radial-gradient(circle at 80% 30%,rgba(232,160,32,0.12) 0%,transparent 60%); }
+    .gs-logo { display:flex;align-items:center;gap:14px;margin-bottom:40px;position:relative; }
+    .gs-logo-icon { width:56px;height:56px;background:linear-gradient(135deg,#e8a020,#c07010);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;color:white;box-shadow:0 8px 25px rgba(232,160,32,0.35); font-family:'Playfair Display',serif;overflow:hidden;flex-shrink:0; }
+    .gs-logo-title { font-size:1rem;font-weight:700;color:white;line-height:1.2; }
+    .gs-logo-sub { font-size:0.72rem;color:rgba(255,255,255,0.45); }
+    .gs-left-title { font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:white;line-height:1.2;margin-bottom:16px;position:relative; }
+    .gs-left-title span { color:#f5bc50; }
+    .gs-left-sub { font-size:0.9rem;color:rgba(255,255,255,0.60);line-height:1.8;margin-bottom:32px;position:relative; }
+    .gs-features { display:flex;flex-direction:column;gap:14px;position:relative; }
+    .gs-feature { display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.75);font-size:0.88rem; }
+    .gs-feature-icon { width:34px;height:34px;background:rgba(255,255,255,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:#f5bc50;flex-shrink:0; }
+
+    /* Right panel */
+    .gs-right { padding:52px 44px;display:flex;flex-direction:column;justify-content:center; }
+    .gs-right-title { font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;color:#111827;margin-bottom:6px; }
+    .gs-right-sub { font-size:0.9rem;color:#6b7280;margin-bottom:36px; }
+
+    .gs-btn { display:flex;align-items:center;gap:14px;padding:18px 24px;border-radius:16px;cursor:pointer;transition:all 0.25s cubic-bezier(0.4,0,0.2,1);text-decoration:none;border:2px solid transparent;margin-bottom:14px; }
+    .gs-btn:last-child{margin-bottom:0;}
+    .gs-btn-icon { width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0; }
+    .gs-btn-label { font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px; }
+    .gs-btn-title { font-size:1rem;font-weight:700; }
+
+    .gs-btn-login { background:#f8faff;border-color:#e0e8ff; }
+    .gs-btn-login:hover { background:#eff3ff;border-color:#1a3c6e;transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,60,110,0.12); }
+    .gs-btn-login .gs-btn-icon { background:rgba(26,60,110,0.08);color:#1a3c6e; }
+    .gs-btn-login .gs-btn-label { color:#6b7280; }
+    .gs-btn-login .gs-btn-title { color:#1a3c6e; }
+
+    .gs-btn-signup { background:linear-gradient(135deg,#1a3c6e,#2554a0);border-color:transparent; }
+    .gs-btn-signup:hover { transform:translateY(-2px);box-shadow:0 12px 32px rgba(26,60,110,0.35); }
+    .gs-btn-signup .gs-btn-icon { background:rgba(255,255,255,0.15);color:white; }
+    .gs-btn-signup .gs-btn-label { color:rgba(255,255,255,0.65); }
+    .gs-btn-signup .gs-btn-title { color:white; }
+
+    .gs-btn-admin { background:#fffbf0;border-color:#fde8a8; }
+    .gs-btn-admin:hover { background:#fff7e0;border-color:#e8a020;transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,160,32,0.15); }
+    .gs-btn-admin .gs-btn-icon { background:rgba(232,160,32,0.12);color:#c07010; }
+    .gs-btn-admin .gs-btn-label { color:#9ca3af; }
+    .gs-btn-admin .gs-btn-title { color:#c07010; }
+
+    .gs-divider { display:flex;align-items:center;gap:14px;margin:20px 0; }
+    .gs-divider-line { flex:1;height:1px;background:#e5e7eb; }
+    .gs-divider-text { font-size:0.78rem;color:#9ca3af;font-weight:500; }
+
+    .gs-guest-link { text-align:center;font-size:0.84rem;color:#6b7280;margin-top:20px; }
+    .gs-guest-link a { color:#1a3c6e;font-weight:600;text-decoration:none; }
+    .gs-guest-link a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="gs-card">
+  <!-- Left -->
+  <div class="gs-left">
+    <div class="gs-logo">
+      <div class="gs-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:18px;"></div>
+      <div>
+        <div class="gs-logo-title">The Brain College</div>
+        <div class="gs-logo-sub">Bhakkar — Est. 2011</div>
+      </div>
+    </div>
+    <h2 class="gs-left-title">Your Future<br>Starts <span>Here</span></h2>
+    <p class="gs-left-sub">Join thousands of students who have transformed their careers through Brain College's certified programs.</p>
+    <div class="gs-features">
+      <div class="gs-feature"><div class="gs-feature-icon"><i class="fas fa-poll"></i></div> Check your results by roll number</div>
+      <div class="gs-feature"><div class="gs-feature-icon"><i class="fas fa-search"></i></div> Track your admission status online</div>
+      <div class="gs-feature"><div class="gs-feature-icon"><i class="fas fa-graduation-cap"></i></div> Apply for courses in minutes</div>
+      <div class="gs-feature"><div class="gs-feature-icon"><i class="fas fa-bell"></i></div> Get latest news &amp; announcements</div>
+      <div class="gs-feature"><div class="gs-feature-icon"><i class="fas fa-certificate"></i></div> Nationally recognized certificates</div>
+    </div>
+  </div>
+
+  <!-- Right -->
+  <div class="gs-right">
+    <h2 class="gs-right-title">Welcome Back!</h2>
+    <p class="gs-right-sub">Choose how you want to continue to The Brain College portal.</p>
+
+    <a href="login.html" class="gs-btn gs-btn-login">
+      <div class="gs-btn-icon"><i class="fas fa-sign-in-alt"></i></div>
+      <div>
+        <div class="gs-btn-label">Already have an account?</div>
+        <div class="gs-btn-title">Login to Your Account</div>
+      </div>
+      <i class="fas fa-chevron-right" style="margin-left:auto;color:#9ca3af;font-size:0.8rem;"></i>
+    </a>
+
+    <a href="signup.html" class="gs-btn gs-btn-signup">
+      <div class="gs-btn-icon"><i class="fas fa-user-plus"></i></div>
+      <div>
+        <div class="gs-btn-label">New student?</div>
+        <div class="gs-btn-title">Create Free Account</div>
+      </div>
+      <i class="fas fa-chevron-right" style="margin-left:auto;color:rgba(255,255,255,0.4);font-size:0.8rem;"></i>
+    </a>
+
+    <div class="gs-divider">
+      <div class="gs-divider-line"></div>
+      <div class="gs-divider-text">OR</div>
+      <div class="gs-divider-line"></div>
+    </div>
+
+    <a href="login.html?admin=1" class="gs-btn gs-btn-admin">
+      <div class="gs-btn-icon"><i class="fas fa-user-shield"></i></div>
+      <div>
+        <div class="gs-btn-label">Staff only</div>
+        <div class="gs-btn-title">Admin / Staff Login</div>
+      </div>
+      <i class="fas fa-chevron-right" style="margin-left:auto;color:#d1a040;font-size:0.8rem;"></i>
+    </a>
+
+    <p class="gs-guest-link">
+      Just browsing? <a href="index.html">Continue to website →</a>
+    </p>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // If already logged in, redirect
+  if (BC_AUTH.isLoggedIn()) {
+    const u = BC_AUTH.currentUser();
+    window.location.href = u.role === 'admin' ? 'admin/dashboard.html' : 'index.html';
+  }
+</script>
+</body>
+</html>

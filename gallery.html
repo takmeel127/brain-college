@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — The Brain College Bhakkar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<div id="preloader"><div class="preloader-inner"><div class="preloader-logo"><img src="images/logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"></div><div class="preloader-text">Loading...</div><div class="preloader-bar"><div class="preloader-progress"></div></div></div></div>
+<a href="https://wa.me/923338044574" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<div class="mobile-overlay"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-header"><div class="nav-logo"><div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div class="nav-logo-text"><div class="nav-logo-title">Brain College</div><div class="nav-logo-sub">Bhakkar</div></div></div><div class="mobile-nav-close"><i class="fas fa-times"></i></div></div>
+  <div class="mobile-nav-links"><a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a><a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> About</a><a href="courses.html" class="mobile-nav-link"><i class="fas fa-book"></i> Courses</a><a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i> Gallery</a><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a></div>
+  <a href="admission.html" class="mobile-nav-apply">Apply Now 2026</a>
+</nav>
+
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div class="nav-logo-text"><div class="nav-logo-title">The Brain College</div><div class="nav-logo-sub">Bhakkar — Est. 2011</div></div></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="courses.html" class="nav-link">Courses</a><a href="faculty.html" class="nav-link">Faculty</a><a href="gallery.html" class="nav-link active">Gallery</a><a href="admission-status.html" class="nav-link">Status</a><a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions"><a href="admission.html" class="nav-apply-btn">Apply Now 2026</a><div class="nav-toggle"><span></span><span></span><span></span></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner page-banner-gallery">
+  <div class="container">
+    <div class="page-banner-inner">
+      <div class="breadcrumb" style="margin-bottom:12px;"><a href="index.html" class="breadcrumb-item">Home</a><span class="breadcrumb-sep"><i class="fas fa-chevron-right"></i></span><span class="breadcrumb-item active">Gallery</span></div>
+      <h1 class="page-banner-title">Photo Gallery</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1rem;margin-top:8px;">Glimpses of life at The Brain College Bhakkar</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <!-- Filters -->
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="lab">Computer Labs</button>
+      <button class="filter-btn" data-filter="class">Classes</button>
+      <button class="filter-btn" data-filter="event">Events</button>
+      <button class="filter-btn" data-filter="student">Students</button>
+      <button class="filter-btn" data-filter="college">College</button>
+      <button class="filter-btn" data-filter="certificate">Certificates</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- LAB items -->
+      <div class="gallery-item wide" data-category="lab">
+        <img src="images/gallery-lab-male.svg" alt="Male Computer Lab — Brain College Bhakkar" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Male Computer Lab</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="lab">
+        <img src="images/gallery-lab-female.svg" alt="Female Computer Lab — Brain College Bhakkar" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Female Computer Lab</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="student">
+        <img src="images/student-boy-lab.svg" alt="Male Student at Computer — Brain College" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Student Practical Training</span></div>
+      </div>
+
+      <!-- CLASS items -->
+      <div class="gallery-item" data-category="class">
+        <img src="images/gallery-class.svg" alt="Classroom Session — Brain College Bhakkar" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Classroom Session</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="student">
+        <img src="images/student-girl-lab.svg" alt="Female Students at Computers — Brain College" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Girls Lab Session</span></div>
+      </div>
+
+      <!-- EVENT wide -->
+      <div class="gallery-item wide" data-category="event">
+        <img src="images/1.jpg" alt="Brain College Bhakkar College Event" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Brain College Event</span></div>
+      </div>
+
+      <div class="gallery-item wide" data-category="event">
+        <img src="images/gallery-event.svg" alt="Certificate Distribution Ceremony — Brain College 2025" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Certificate Distribution Ceremony 2025</span></div>
+      </div>
+
+      <!-- COLLEGE items -->
+      <div class="gallery-item wide" data-category="college">
+        <img src="images/6.webp" alt="The Brain College Main Gate, Bhakkar" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Brain College Main Gate</span></div>
+      </div>
+
+      <div class="gallery-item wide" data-category="lab">
+        <img src="images/7.webp" alt="Computer Laboratory at The Brain College Bhakkar" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Computer Laboratory</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="college">
+        <img src="images/college-building.svg" alt="The Brain College Bhakkar Campus" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Brain College — Campus View</span></div>
+      </div>
+
+      <!-- CERTIFICATE wide -->
+      <div class="gallery-item wide" data-category="certificate">
+        <img src="images/gallery-certificate.svg" alt="Certificate of Completion — Brain College Bhakkar" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Certificate of Completion — Batch 2025</span></div>
+      </div>
+
+      <!-- TEACHER / FACULTY items -->
+      <div class="gallery-item" data-category="college">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85" alt="Muhammad Shahid — Computer Instructor" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Muhammad Shahid — Instructor</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="college">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85" alt="Tariq Mehmood — IT Instructor" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Tariq Mehmood — IT Instructor</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="college">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=85" alt="Asma Bibi — Typing Instructor" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Asma Bibi — Typing Instructor</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="college">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85" alt="Ali Hassan — Shorthand Expert" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Ali Hassan — Shorthand Expert</span></div>
+      </div>
+
+      <!-- More student/event -->
+      <div class="gallery-item" data-category="event">
+        <img src="images/gallery-event.svg" alt="Annual Prize Distribution — Brain College" style="width:100%;height:100%;object-fit:cover;filter:hue-rotate(20deg);">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Annual Prize Distribution</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="lab">
+        <img src="images/hero-scene.svg" alt="Computer Lab Scene — Brain College" style="width:100%;height:100%;object-fit:cover;">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Lab — Students at Work</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="class">
+        <img src="images/gallery-class.svg" alt="Teaching Session — Brain College" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.2);">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Theory Class in Progress</span></div>
+      </div>
+
+      <div class="gallery-item" data-category="student">
+        <img src="images/student-girl-lab.svg" alt="Student Working on Computer — Brain College" style="width:100%;height:100%;object-fit:cover;filter:hue-rotate(15deg);">
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Student — Computer Practice</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div><h2 class="cta-title">Want to Be Part of Our Story?</h2><p class="cta-subtitle">Join The Brain College Bhakkar and create your own success story. Admissions open 2026.</p></div>
+      <div class="cta-actions"><a href="admission.html" class="btn btn-accent btn-lg"><i class="fas fa-graduation-cap"></i> Apply Now</a><a href="contact.html" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> Contact Us</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand-logo"><div class="footer-brand-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div><div class="footer-brand-title">The Brain College</div></div></div><p class="footer-brand-desc">Professional education since 2011.</p><div class="footer-social"><a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a></div></div>
+      <div><div class="footer-col-title">Quick Links</div><div class="footer-links"><a href="index.html" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a><a href="about.html" class="footer-link"><i class="fas fa-chevron-right"></i> About</a><a href="courses.html" class="footer-link"><i class="fas fa-chevron-right"></i> Courses</a><a href="contact.html" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a></div></div>
+      <div><div class="footer-col-title">Gallery</div><div class="footer-links"><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Computer Labs</a><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Classes</a><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Events</a><a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Certificates</a></div></div>
+      <div><div class="footer-col-title">Contact</div><div class="footer-contact-items"><div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><div class="footer-contact-text">Darya Khan Road, Bhakkar</div></div><div class="footer-contact-item"><i class="fas fa-phone"></i><div class="footer-contact-text">0333-8044574</div></div></div></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-text">© 2026 The Brain College Bhakkar.</div></div>
+  </div>
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <button id="lightbox-close"><i class="fas fa-times"></i></button>
+  <img src="" alt="" id="lightbox-img">
+  <div id="lightbox-caption"></div>
+</div>
+
+<script>
+// Lightbox for gallery
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+const lbCaption = document.getElementById('lightbox-caption');
+const lbClose = document.getElementById('lightbox-close');
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    const caption = item.querySelector('.gallery-overlay span');
+    if (img) {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbCaption.textContent = caption ? caption.textContent : '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+
+lbClose.addEventListener('click', () => {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+});
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+</body>
+</html>

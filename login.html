@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — The Brain College Bhakkar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    body{min-height:100vh;background:linear-gradient(135deg,#0a1628 0%,#0f2444 40%,#1a3c6e 100%);display:flex;align-items:center;justify-content:center;padding:20px;overflow:hidden;}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;}
+    .orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(37,84,160,0.35) 0%,transparent 70%);top:-100px;left:-100px;animation:orb-drift 12s ease-in-out infinite;}
+    .orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(232,160,32,0.15) 0%,transparent 70%);bottom:-80px;right:-80px;animation:orb-drift 16s ease-in-out infinite reverse;}
+    @keyframes orb-drift{0%,100%{transform:translate(0,0);}50%{transform:translate(30px,-20px);}}
+
+    .auth-card{background:white;border-radius:24px;padding:44px 40px;width:100%;max-width:440px;box-shadow:0 30px 80px rgba(0,0,0,0.4);animation:auth-in 0.45s cubic-bezier(0.4,0,0.2,1);}
+    @keyframes auth-in{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+    .auth-logo{display:flex;flex-direction:column;align-items:center;margin-bottom:32px;}
+    .auth-logo-icon{width:60px;height:60px;background:linear-gradient(135deg,#1a3c6e,#2554a0);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;color:white;margin-bottom:12px;box-shadow:0 8px 25px rgba(26,60,110,0.3);font-family:'Playfair Display',serif;overflow:hidden;}
+    .auth-logo-icon img{width:100%;height:100%;object-fit:cover;border-radius:18px;display:block;}
+    .auth-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#111827;text-align:center;}
+    .auth-sub{font-size:0.84rem;color:#6b7280;text-align:center;margin-top:4px;}
+
+    .form-group{margin-bottom:16px;}
+    .form-label{display:block;font-size:0.82rem;font-weight:600;color:#374151;margin-bottom:6px;}
+    .input-wrap{position:relative;}
+    .input-wrap i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:#9ca3af;font-size:0.9rem;pointer-events:none;}
+    .form-input{width:100%;padding:11px 14px 11px 38px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:0.9rem;color:#1f2937;outline:none;transition:all 0.2s;font-family:inherit;background:white;}
+    .form-input:focus{border-color:#1a3c6e;box-shadow:0 0 0 3px rgba(26,60,110,0.08);}
+    .toggle-pw{position:absolute;right:13px;top:50%;transform:translateY(-50%);color:#9ca3af;cursor:pointer;font-size:0.9rem;transition:color 0.2s;}
+    .toggle-pw:hover{color:#1a3c6e;}
+
+    .auth-error{display:none;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:10px 14px;font-size:0.83rem;color:#991b1b;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+    .auth-error.show{display:flex;}
+
+    .auth-submit{width:100%;padding:13px;background:linear-gradient(135deg,#1a3c6e,#2554a0);color:white;border:none;border-radius:10px;font-size:0.95rem;font-weight:700;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;box-shadow:0 4px 15px rgba(26,60,110,0.3);margin-top:4px;}
+    .auth-submit:hover{transform:translateY(-1px);box-shadow:0 8px 25px rgba(26,60,110,0.4);}
+    .auth-submit:disabled{opacity:0.7;cursor:not-allowed;transform:none;}
+
+    .auth-footer{text-align:center;margin-top:20px;font-size:0.84rem;color:#6b7280;}
+    .auth-footer a{color:#1a3c6e;font-weight:600;text-decoration:none;}
+    .auth-footer a:hover{text-decoration:underline;}
+
+    .auth-divider{display:flex;align-items:center;gap:12px;margin:20px 0;}
+    .auth-divider-line{flex:1;height:1px;background:#e5e7eb;}
+    .auth-divider-text{font-size:0.75rem;color:#9ca3af;font-weight:500;}
+
+    .demo-creds{background:#f8faff;border:1px dashed #c7d2fe;border-radius:10px;padding:12px 14px;margin-top:16px;}
+    .demo-creds-title{font-size:0.75rem;font-weight:700;color:#1a3c6e;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+    .demo-creds table{width:100%;font-size:0.78rem;border-collapse:collapse;}
+    .demo-creds td{padding:3px 6px;color:#4b5563;}
+    .demo-creds td:first-child{font-weight:600;color:#1a3c6e;white-space:nowrap;}
+    .demo-creds tr{cursor:pointer;border-radius:4px;}
+    .demo-creds tr:hover td{color:#1a3c6e;}
+
+    .admin-banner{background:linear-gradient(135deg,rgba(232,160,32,0.08),rgba(232,160,32,0.04));border:1px solid rgba(232,160,32,0.25);border-radius:10px;padding:12px 14px;margin-bottom:20px;display:flex;align-items:center;gap:10px;font-size:0.83rem;color:#92400e;}
+    .admin-banner i{color:#e8a020;}
+  </style>
+</head>
+<body>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="auth-card">
+  <div class="auth-logo">
+    <div class="auth-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:18px;"></div>
+    <div class="auth-title">Welcome Back</div>
+    <div class="auth-sub">Login to The Brain College Bhakkar</div>
+  </div>
+
+  <div id="adminBanner" class="admin-banner" style="display:none;">
+    <i class="fas fa-user-shield"></i>
+    <span>Admin / Staff login. Use your admin credentials.</span>
+  </div>
+
+  <div class="auth-error" id="loginError">
+    <i class="fas fa-exclamation-circle"></i>
+    <span id="loginErrorMsg">Invalid credentials.</span>
+  </div>
+
+  <form id="loginForm">
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <div class="input-wrap">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="loginEmail" class="form-input" placeholder="your@email.com" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Password</label>
+      <div class="input-wrap">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="loginPassword" class="form-input" placeholder="Enter your password" required>
+        <span class="toggle-pw fas fa-eye" id="togglePw"></span>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+      <label style="display:flex;align-items:center;gap:7px;font-size:0.82rem;color:#6b7280;cursor:pointer;">
+        <input type="checkbox" checked style="accent-color:#1a3c6e;"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="auth-submit" id="loginBtn">
+      <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+  </form>
+
+  <div class="auth-divider">
+    <div class="auth-divider-line"></div>
+    <div class="auth-divider-text">Demo Credentials</div>
+    <div class="auth-divider-line"></div>
+  </div>
+
+  <div class="demo-creds">
+    <div class="demo-creds-title"><i class="fas fa-info-circle"></i> Click a row to auto-fill</div>
+    <table>
+      <tr onclick="fillCreds('admin123@gmail.com','admin123')">
+        <td><i class="fas fa-user-shield" style="color:#e8a020;margin-right:4px;"></i>Admin</td>
+        <td>admin123@gmail.com</td>
+        <td>admin123</td>
+      </tr>
+      <tr onclick="fillCreds('student@brain.com','student123')">
+        <td><i class="fas fa-user-graduate" style="color:#1a3c6e;margin-right:4px;"></i>Student</td>
+        <td>student@brain.com</td>
+        <td>student123</td>
+      </tr>
+    </table>
+  </div>
+
+  <p class="auth-footer" style="margin-top:16px;">
+    Don't have an account? <a href="signup.html">Create one free</a>
+  </p>
+  <p class="auth-footer" style="margin-top:8px;">
+    <a href="get-started.html"><i class="fas fa-arrow-left"></i> Back to Get Started</a>
+  </p>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script>
+  if (BC_AUTH.isLoggedIn()) {
+    const u = BC_AUTH.currentUser();
+    window.location.href = u.role === 'admin' ? 'admin/dashboard.html' : 'index.html';
+  }
+
+  // Show admin banner if ?admin=1
+  if (new URLSearchParams(window.location.search).get('admin')) {
+    document.getElementById('adminBanner').style.display = 'flex';
+  }
+
+  function fillCreds(email, pw) {
+    document.getElementById('loginEmail').value = email;
+    document.getElementById('loginPassword').value = pw;
+    document.getElementById('loginEmail').focus();
+  }
+
+  document.getElementById('togglePw').addEventListener('click', function() {
+    const inp = document.getElementById('loginPassword');
+    if (inp.type === 'password') { inp.type = 'text'; this.className = 'toggle-pw fas fa-eye-slash'; }
+    else { inp.type = 'password'; this.className = 'toggle-pw fas fa-eye'; }
+  });
+
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value.trim();
+    const pw    = document.getElementById('loginPassword').value;
+    const btn   = document.getElementById('loginBtn');
+    const errEl = document.getElementById('loginError');
+    const errMsg= document.getElementById('loginErrorMsg');
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
+    errEl.classList.remove('show');
+
+    setTimeout(() => {
+      const result = BC_AUTH.login(email, pw);
+      if (result.ok) {
+        btn.innerHTML = '<i class="fas fa-check"></i> Success! Redirecting...';
+        btn.style.background = 'linear-gradient(135deg,#10b981,#059669)';
+        const redirect = new URLSearchParams(window.location.search).get('redirect');
+        setTimeout(() => {
+          if (redirect) window.location.href = decodeURIComponent(redirect);
+          else if (result.user.role === 'admin') window.location.href = 'admin/dashboard.html';
+          else window.location.href = 'index.html';
+        }, 700);
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Login';
+        btn.style.background = '';
+        errMsg.textContent = result.msg;
+        errEl.classList.add('show');
+      }
+    }, 800);
+  });
+</script>
+</body>
+</html>

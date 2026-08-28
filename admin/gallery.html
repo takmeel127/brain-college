@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Brain College Admin</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="sidebar-brand"><div class="sidebar-brand-icon"><img src="../images/logo.jpg" alt="Logo"></div><div class="sidebar-brand-text"><div class="sidebar-brand-title">Brain College</div><div class="sidebar-brand-sub">Admin Panel</div></div></div>
+    <div class="sidebar-admin-info"><div class="sidebar-admin-avatar"><i class="fas fa-user-shield"></i></div><div><div class="sidebar-admin-name">Administrator</div><div class="sidebar-admin-role">Super Admin</div></div></div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Main</div><a href="dashboard.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-th-large"></i></span> Dashboard</a>
+      <div class="sidebar-section-label">Content</div><a href="posts.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-pen-nib"></i></span> Posts</a><a href="results.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-poll"></i></span> Results</a><a href="gallery.html" class="sidebar-link active"><span class="link-icon"><i class="fas fa-images"></i></span> Gallery</a>
+      <div class="sidebar-section-label">Admissions</div><a href="admissions.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-file-alt"></i></span> Applications</a><a href="students.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-user-graduate"></i></span> Students</a>
+      <div class="sidebar-section-label">Academic</div><a href="courses.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-book"></i></span> Courses</a><a href="faculty.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-chalkboard-teacher"></i></span> Faculty</a>
+      <div class="sidebar-section-label">System</div><a href="settings.html" class="sidebar-link"><span class="link-icon"><i class="fas fa-cog"></i></span> Settings</a>
+    </nav>
+    <div class="sidebar-footer"><a href="../gallery.html" class="sidebar-footer-link" target="_blank"><i class="fas fa-external-link-alt"></i> View Gallery</a><a href="index.html" class="sidebar-footer-link" data-logout><i class="fas fa-sign-out-alt"></i> Logout</a></div>
+  </aside>
+  <div class="sidebar-overlay"></div>
+  <main class="admin-main">
+    <div class="admin-topbar"><div class="topbar-left"><div class="topbar-toggle"><i class="fas fa-bars"></i></div><div class="topbar-breadcrumb"><span class="topbar-breadcrumb-item">Admin</span><span class="topbar-breadcrumb-sep"><i class="fas fa-chevron-right"></i></span><span class="topbar-breadcrumb-item active">Gallery</span></div></div><div class="topbar-right"><a href="../gallery.html" target="_blank" class="topbar-view-site"><i class="fas fa-external-link-alt"></i> <span>View Gallery</span></a><div class="topbar-profile"><div class="topbar-profile-avatar">A</div><div><div class="topbar-profile-name">Admin</div></div></div></div></div>
+    <div class="admin-content">
+      <div class="page-header"><div><div class="page-title">Gallery Management</div><div class="page-subtitle">Upload and remove images shown on the public Gallery page.</div></div></div>
+      <div class="card media-manager-card">
+        <div class="card-header"><div class="card-title"><i class="fas fa-cloud-upload-alt"></i> Add Gallery Image</div></div>
+        <div class="card-body">
+          <div class="media-manager-form"><div class="form-group"><label class="form-label" for="galleryTitle">Image Title <span>*</span></label><input class="form-control" id="galleryTitle" placeholder="e.g. New Computer Lab"></div><div class="form-group"><label class="form-label" for="galleryCategory">Category</label><select class="form-control" id="galleryCategory"><option value="college">College</option><option value="lab">Computer Labs</option><option value="class">Classes</option><option value="event">Events</option><option value="student">Students</option><option value="certificate">Certificates</option></select></div><label class="media-file-picker" for="galleryFile"><i class="fas fa-image"></i><span id="galleryFileLabel">Choose image</span><input type="file" id="galleryFile" accept="image/png,image/jpeg,image/webp"></label><button class="btn btn-primary" id="saveGalleryImage"><i class="fas fa-save"></i> Save Image</button></div>
+          <div class="media-preview" id="galleryPreview" hidden><img id="galleryPreviewImage" alt="Selected gallery preview"></div>
+        </div>
+      </div>
+      <div class="card"><div class="card-header"><div class="card-title"><i class="fas fa-images"></i> Uploaded Gallery Images</div><span class="results-count" id="galleryMediaCount"></span></div><div class="media-library-grid" id="galleryMediaGrid"></div></div>
+    </div>
+  </main>
+</div>
+<script src="../js/auth.js"></script><script src="../js/admin.js"></script>
+<script>
+  let galleryImageData = '';
+  const galleryFile = document.getElementById('galleryFile');
+  galleryFile.addEventListener('change', () => { const file = galleryFile.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = event => { galleryImageData = event.target.result; document.getElementById('galleryPreviewImage').src = galleryImageData; document.getElementById('galleryFileLabel').textContent = file.name; document.getElementById('galleryPreview').hidden = false; }; reader.readAsDataURL(file); });
+  function renderGalleryMedia() { const items = BC_AUTH.getMedia('gallery'); document.getElementById('galleryMediaCount').textContent = `${items.length} uploaded`; document.getElementById('galleryMediaGrid').innerHTML = items.length ? items.map(item => `<article class="media-library-item"><img src="${item.image}" alt="${item.title}"><div class="media-library-info"><strong>${item.title}</strong><span>${item.category}</span><button class="btn btn-danger btn-sm" onclick="deleteGalleryImage('${item.id}')"><i class="fas fa-trash"></i> Delete</button></div></article>`).join('') : '<div class="media-empty"><i class="fas fa-images"></i><span>No uploaded gallery images yet.</span></div>'; }
+  function deleteGalleryImage(id) { if (!confirm('Delete this gallery image?')) return; BC_AUTH.deleteMedia('gallery', id); renderGalleryMedia(); showToast('Gallery image deleted.', 'success'); }
+  document.getElementById('saveGalleryImage').addEventListener('click', () => { const title = document.getElementById('galleryTitle').value.trim(); if (!title || !galleryImageData) { showToast('Image title and file are required.', 'error'); return; } BC_AUTH.saveMedia('gallery', { id: 'gallery-' + Date.now(), title, category: document.getElementById('galleryCategory').value, image: galleryImageData }); document.getElementById('galleryTitle').value = ''; galleryFile.value = ''; galleryImageData = ''; document.getElementById('galleryPreview').hidden = true; document.getElementById('galleryFileLabel').textContent = 'Choose image'; renderGalleryMedia(); showToast('Gallery image uploaded successfully.', 'success'); });
+  renderGalleryMedia();
+</script>
+</body>
+</html>

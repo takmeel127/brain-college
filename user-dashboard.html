@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard — The Brain College Bhakkar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    .ud-page{min-height:100vh;background:#f1f5f9;padding-top:var(--nav-height);}
+    .ud-banner{background:linear-gradient(135deg,#0f2444 0%,#1a3c6e 60%,#2554a0 100%);padding:40px 0 60px;position:relative;overflow:hidden;}
+    .ud-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:50px 50px;}
+    .ud-banner::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(232,160,32,0.10) 0%,transparent 50%);}
+    .ud-banner-inner{position:relative;z-index:1;display:flex;align-items:center;gap:24px;}
+    .ud-avatar{width:80px;height:80px;background:linear-gradient(135deg,#e8a020,#c07010);border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;color:white;flex-shrink:0;box-shadow:0 8px 25px rgba(232,160,32,0.4);}
+    .ud-user-name{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:white;}
+    .ud-user-info{font-size:0.88rem;color:rgba(255,255,255,0.65);margin-top:4px;}
+    .ud-roll-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:5px 14px;font-size:0.8rem;color:rgba(255,255,255,0.85);margin-top:8px;font-family:monospace;}
+    .ud-content{max-width:1000px;margin:0 auto;padding:0 24px;transform:translateY(-28px);}
+    .ud-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:24px;}
+    .ud-card{background:white;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border:1px solid #e5e7eb;display:flex;align-items:center;gap:14px;transition:all 0.2s;cursor:pointer;}
+    .ud-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+    .ud-card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+    .ud-card-num{font-size:1.5rem;font-weight:900;color:#111827;line-height:1;}
+    .ud-card-label{font-size:0.78rem;color:#6b7280;margin-top:2px;}
+    .ud-section{background:white;border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border:1px solid #e5e7eb;margin-bottom:20px;}
+    .ud-section-title{font-size:1rem;font-weight:700;color:#111827;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+    .ud-section-title i{color:#1a3c6e;}
+    .ud-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .ud-info-item{padding:12px 14px;background:#f8faff;border-radius:10px;border:1px solid #e0e8ff;}
+    .ud-info-label{font-size:0.72rem;color:#9ca3af;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px;}
+    .ud-info-value{font-size:0.9rem;font-weight:600;color:#1f2937;}
+    .ud-result-box{padding:20px;border-radius:12px;text-align:center;}
+    .ud-result-grade{font-size:3.5rem;font-weight:900;line-height:1;}
+    .ud-result-pass{background:rgba(16,185,129,0.06);border:2px solid rgba(16,185,129,0.2);}
+    .ud-result-fail{background:rgba(239,68,68,0.06);border:2px solid rgba(239,68,68,0.2);}
+    .ud-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;}
+    .ud-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;font-size:0.86rem;font-weight:600;cursor:pointer;transition:all 0.2s;text-decoration:none;border:1.5px solid transparent;}
+    .ud-btn-primary{background:#1a3c6e;color:white;}
+    .ud-btn-primary:hover{background:#2554a0;transform:translateY(-1px);}
+    .ud-btn-outline{background:transparent;color:#1a3c6e;border-color:#1a3c6e;}
+    .ud-btn-outline:hover{background:#1a3c6e;color:white;}
+    @media(max-width:700px){.ud-cards{grid-template-columns:1fr 1fr;}.ud-info-grid{grid-template-columns:1fr;}.ud-banner-inner{flex-direction:column;text-align:center;}}
+    @media(max-width:480px){.ud-cards{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-inner"><div class="preloader-logo"><img src="images/logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"></div><div class="preloader-text">Loading...</div><div class="preloader-bar"><div class="preloader-progress"></div></div></div></div>
+
+<!-- Navbar -->
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><img src="images/logo.jpg" alt="Brain College Logo" style="width:100%;height:100%;object-fit:cover;border-radius:10px;"></div><div class="nav-logo-text"><div class="nav-logo-title">The Brain College</div><div class="nav-logo-sub">Bhakkar — Est. 2011</div></div></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="results.html" class="nav-link">Results</a>
+        <a href="admission-status.html" class="nav-link">Admission Status</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="admission.html" class="nav-apply-btn">Apply Now</a>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ud-page">
+  <!-- Banner -->
+  <div class="ud-banner">
+    <div class="container">
+      <div class="ud-banner-inner" id="udBanner">
+        <div class="ud-avatar" id="udAvatar">M</div>
+        <div>
+          <div class="ud-user-name" id="udName">Loading...</div>
+          <div class="ud-user-info" id="udEmail">—</div>
+          <div class="ud-user-info" id="udPhone">—</div>
+          <div class="ud-roll-badge"><i class="fas fa-id-card"></i> <span id="udRollNo">—</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ud-content">
+    <!-- Quick stats -->
+    <div class="ud-cards">
+      <div class="ud-card" onclick="window.location.href='results.html'">
+        <div class="ud-card-icon" style="background:rgba(16,185,129,0.08);color:#10b981;"><i class="fas fa-poll"></i></div>
+        <div><div class="ud-card-num" id="udResultCount">0</div><div class="ud-card-label">Results Available</div></div>
+      </div>
+      <div class="ud-card" onclick="window.location.href='admission-status.html'">
+        <div class="ud-card-icon" style="background:rgba(26,60,110,0.08);color:#1a3c6e;"><i class="fas fa-file-alt"></i></div>
+        <div><div class="ud-card-num" id="udAdmStatus">—</div><div class="ud-card-label">Admission Status</div></div>
+      </div>
+      <div class="ud-card" onclick="window.location.href='courses.html'">
+        <div class="ud-card-icon" style="background:rgba(232,160,32,0.10);color:#c07010;"><i class="fas fa-book"></i></div>
+        <div><div class="ud-card-num">5</div><div class="ud-card-label">Available Courses</div></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <!-- Profile Info -->
+      <div class="ud-section">
+        <div class="ud-section-title"><i class="fas fa-user"></i> My Profile</div>
+        <div class="ud-info-grid">
+          <div class="ud-info-item"><div class="ud-info-label">Full Name</div><div class="ud-info-value" id="piName">—</div></div>
+          <div class="ud-info-item"><div class="ud-info-label">Email</div><div class="ud-info-value" id="piEmail" style="font-size:0.82rem;word-break:break-all;">—</div></div>
+          <div class="ud-info-item"><div class="ud-info-label">Phone</div><div class="ud-info-value" id="piPhone">—</div></div>
+          <div class="ud-info-item"><div class="ud-info-label">Course</div><div class="ud-info-value" id="piCourse">—</div></div>
+          <div class="ud-info-item"><div class="ud-info-label">Roll Number</div><div class="ud-info-value" id="piRoll" style="font-family:monospace;font-size:0.82rem;">—</div></div>
+          <div class="ud-info-item"><div class="ud-info-label">Member Since</div><div class="ud-info-value" id="piDate">—</div></div>
+        </div>
+        <div class="ud-actions">
+          <a href="admission.html" class="ud-btn ud-btn-primary"><i class="fas fa-graduation-cap"></i> Apply for Course</a>
+          <a href="contact.html" class="ud-btn ud-btn-outline"><i class="fas fa-phone"></i> Contact College</a>
+        </div>
+      </div>
+
+      <!-- My Result -->
+      <div class="ud-section">
+        <div class="ud-section-title"><i class="fas fa-poll"></i> My Latest Result</div>
+        <div id="myResultWrap">
+          <div style="text-align:center;padding:32px 0;color:#9ca3af;">
+            <i class="fas fa-poll" style="font-size:2.5rem;margin-bottom:12px;color:#d1d5db;"></i>
+            <div style="font-size:0.9rem;font-weight:600;color:#6b7280;margin-bottom:6px;">No result found</div>
+            <div style="font-size:0.82rem;">Results will appear here once published by admin.</div>
+          </div>
+        </div>
+        <div class="ud-actions" style="margin-top:12px;">
+          <a href="results.html" class="ud-btn ud-btn-primary"><i class="fas fa-search"></i> Check Results</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick links -->
+    <div class="ud-section">
+      <div class="ud-section-title"><i class="fas fa-bolt"></i> Quick Links</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;">
+        <a href="results.html" style="display:flex;align-items:center;gap:10px;padding:14px;background:#f8faff;border-radius:10px;border:1px solid #e0e8ff;text-decoration:none;color:#1a3c6e;font-size:0.86rem;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='#eff3ff'" onmouseout="this.style.background='#f8faff'"><i class="fas fa-poll"></i> Check Results</a>
+        <a href="admission-status.html" style="display:flex;align-items:center;gap:10px;padding:14px;background:#f8faff;border-radius:10px;border:1px solid #e0e8ff;text-decoration:none;color:#1a3c6e;font-size:0.86rem;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='#eff3ff'" onmouseout="this.style.background='#f8faff'"><i class="fas fa-search"></i> Admission Status</a>
+        <a href="courses.html" style="display:flex;align-items:center;gap:10px;padding:14px;background:#f8faff;border-radius:10px;border:1px solid #e0e8ff;text-decoration:none;color:#1a3c6e;font-size:0.86rem;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='#eff3ff'" onmouseout="this.style.background='#f8faff'"><i class="fas fa-book"></i> View Courses</a>
+        <a href="gallery.html" style="display:flex;align-items:center;gap:10px;padding:14px;background:#f8faff;border-radius:10px;border:1px solid #e0e8ff;text-decoration:none;color:#1a3c6e;font-size:0.86rem;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='#eff3ff'" onmouseout="this.style.background='#f8faff'"><i class="fas fa-images"></i> Gallery</a>
+        <a href="contact.html" style="display:flex;align-items:center;gap:10px;padding:14px;background:#f8faff;border-radius:10px;border:1px solid #e0e8ff;text-decoration:none;color:#1a3c6e;font-size:0.86rem;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='#eff3ff'" onmouseout="this.style.background='#f8faff'"><i class="fas fa-phone"></i> Contact Us</a>
+        <a href="#" onclick="BC_AUTH.logout()" style="display:flex;align-items:center;gap:10px;padding:14px;background:#fff8f8;border-radius:10px;border:1px solid #fee2e2;text-decoration:none;color:#ef4444;font-size:0.86rem;font-weight:600;transition:all 0.2s;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Require login
+  if (!BC_AUTH.requireLogin('user-dashboard.html')) throw new Error('Not logged in');
+
+  const user = BC_AUTH.currentUser();
+  if (user.role === 'admin') window.location.href = 'admin/dashboard.html';
+
+  // Fill banner
+  document.getElementById('udAvatar').textContent = user.avatar || user.name.charAt(0);
+  document.getElementById('udName').textContent = user.name;
+  document.getElementById('udEmail').textContent = user.email;
+  document.getElementById('udPhone').textContent = user.phone || 'Not provided';
+  document.getElementById('udRollNo').textContent = user.rollNo || 'Not assigned';
+
+  // Fill profile info
+  document.getElementById('piName').textContent   = user.name;
+  document.getElementById('piEmail').textContent  = user.email;
+  document.getElementById('piPhone').textContent  = user.phone || '—';
+  document.getElementById('piCourse').textContent = user.course || 'Not selected';
+  document.getElementById('piRoll').textContent   = user.rollNo || '—';
+  document.getElementById('piDate').textContent   = BC_AUTH.formatDate(user.createdAt);
+
+  // Result
+  if (user.rollNo) {
+    const result = BC_AUTH.getResultByRollNo(user.rollNo);
+    document.getElementById('udResultCount').textContent = result ? '1' : '0';
+    if (result) {
+      const isPass = result.status === 'Pass';
+      document.getElementById('myResultWrap').innerHTML = `
+        <div class="ud-result-box ${isPass ? 'ud-result-pass' : 'ud-result-fail'}">
+          <div class="ud-result-grade" style="color:${isPass ? '#10b981' : '#ef4444'}">${result.grade}</div>
+          <div style="font-size:1.1rem;font-weight:700;color:#111827;margin:8px 0 4px;">${result.marks} / ${result.total}</div>
+          <div style="font-size:0.88rem;color:#6b7280;">${result.course} — ${result.percentage}</div>
+          <div style="margin-top:12px;display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:20px;font-size:0.82rem;font-weight:700;background:${isPass ? 'rgba(16,185,129,0.12)' : 'rgba(239,68,68,0.12)'};color:${isPass ? '#065f46' : '#991b1b'};">
+            ${isPass ? '✅ PASS' : '❌ FAIL'}
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  // Admission status
+  const admissions = BC_AUTH.getAllAdmissions().filter(a => a.email === user.email || a.phone === user.phone);
+  if (admissions.length > 0) {
+    const latest = admissions[admissions.length - 1];
+    document.getElementById('udAdmStatus').textContent = latest.status?.charAt(0).toUpperCase() + latest.status?.slice(1) || '—';
+  }
+</script>
+</body>
+</html>
